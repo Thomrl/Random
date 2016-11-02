@@ -22,7 +22,7 @@
                     <h2>Random Decider</h2>
                     <h3>I choose</h3>
                     <p id="resultHere">Let me think..</p>
-                    <textarea id="uInput" class="boxboxplease" placeholder="Type differt things in here. Use comma , to split them up."></textarea>
+                    <textarea id="uInput" class="boxboxplease" placeholder="Type different things in here. Use comma , to split them up."></textarea>
                     <button id="getResult" class="boxboxplease btns">Decide</button>
                     <p id="inputHere"></p>
                 </center>
@@ -31,24 +31,9 @@
                 
             </div>
         </div>
-    <script>
-        $('#getResult').click(function() {
-        var inputHere = $('#uInput').val();
-        var result = inputHere.split(",");
-        var resultHere = result[Math.floor(Math.random() * result.length)];
-        $('#resultHere').html(resultHere)
-        });
-
-        $(document).keypress(function(e){
-        if (e.which == 13){
-        $("#getResult").click();
-        }
-    });
-
-console.log("Program loaded");
-    </script>
     </center>
 
+    <script src="script.js"</script>
     <script src="bootstrap.min.js"</script>
     </body>
 </html>
