@@ -34,22 +34,9 @@ html, body {
     background-color: #ffa500;
     color: Black;
     box-shadow: 0;
-    font-size:1.15rem;
     border-radius: 5px;
 	width: 98%;
     font-size: 2rem;
-}
-
-#preSeries {
-	height: 50px;
-    border-color: #ffa500;
-    background-color: #ffa500;
-    color: Black;
-    box-shadow: 0;
-    font-size:1.15rem;
-    border-radius: 5px;
-	max-width: 500px;
-	width: 99%;
 }
 
 .boxboxplease {
