@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
         <title>Decider</title>
     </head>
     <body>
-        <center>
-            <h1>Random Decider</h1>
-            <h3>I choose</h3>
-            <p id="resultHere">Let me think..</p>
-            <textarea id="uInput" class="boxboxplease" placeholder="Type differt things in here. Use comma , to split them up."></textarea>
-            <button id="getResult" class="boxboxplease btns">Decide</button>
-            <p id="inputHere"></p>
-        </center>
+
+        <div class="row">
+            <div class=" col-sm-2 col-md-3 col-lg-4">
+
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                <center>
+                    <h1>Random Decider</h1>
+                    <h3>I choose</h3>
+                    <p id="resultHere">Let me think..</p>
+                    <textarea id="uInput" class="boxboxplease" placeholder="Type differt things in here. Use comma , to split them up."></textarea>
+                    <button id="getResult" class="boxboxplease btns">Decide</button>
+                    <p id="inputHere"></p>
+                </center>
+            </div>
+            <div class=" col-sm-2 col-md-3 col-lg-4">
+                
+            </div>
+        </div>
     <script>
         $('#getResult').click(function() {
         var inputHere = $('#uInput').val();
