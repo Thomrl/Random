@@ -7,12 +7,8 @@ html, body {
     color: #ffa500;
 }
 
-
-
 #uInput {
-	vertical-align: top;
 	height: 70px;
-	word-wrap: break-word;
     resize: none;
     background-color: #444444;
     border-color: #ffa500;
@@ -20,7 +16,6 @@ html, body {
 	width: 98%;
     border-radius: 5px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 #uInput:focus {
@@ -32,17 +27,8 @@ html, body {
 	height: 50px;
     border-color: #ffa500;
     background-color: #ffa500;
-    color: Black;
-    box-shadow: 0;
+    color: black;
     border-radius: 5px;
 	width: 98%;
     font-size: 2rem;
-}
-
-.boxboxplease {
-	display: block;
-}
-
-.btns {
-	margin-bottom: 5px;
 }
