@@ -7,28 +7,106 @@ html, body {
     color: #ffa500;
 }
 
-#uInput {
-	height: 70px;
+
+.uInput {
+    vertical-align: top;
+    height: 70px;
+    word-wrap: break-word;
     resize: none;
     background-color: #444444;
     border-color: #ffa500;
     color: white;
-	width: 98%;
+    width: 98%;
     border-radius: 5px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-#uInput:focus {
+.uInput:focus {
+    border-color: #ffffff;
+    outline: none !important;
+}
+
+.inputs {
+    vertical-align: top;
+    text-align: center;
+    height: 70px;
+    word-wrap: break-word;
+    resize: none;
+    background-color: #444444;
+    border-color: #ffa500;
+    color: white;
+    width: 49%;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inputs:focus {
     border-color: #ffffff;
     outline: none !important;
 }
 
 #getResult {
-	height: 50px;
+
+}
+
+.boxboxplease {
+	display: block;
+}
+
+.btns {
+    margin-bottom: 5px;
+    height: 50px;
     border-color: #ffa500;
     background-color: #ffa500;
-    color: black;
+    color: Black;
+    box-shadow: 0;
     border-radius: 5px;
-	width: 98%;
+    width: 98%;
     font-size: 2rem;
+}
+
+.btns2 {
+    margin-bottom: 5px;
+    height: 50px;
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: Black;
+    box-shadow: 0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.btns3 {
+    margin-bottom: 5px;
+    height: 50px;
+    border-color: #e31f1f;
+    background-color: #e31f1f;
+    color: Black;
+    box-shadow: 0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 2rem;
+}
+
+a h2 {
+    color: #ffa500;
+}
+
+a h2:hover {
+    color: #ffa500;
+    text-decoration: underline;
+    text-decoration-color: #ffa500;
+}
+
+.yes {
+    color: green;
+    font-size: 3rem;
+}
+
+.no {
+    color: red;
+    font-size: 3rem;
 }
