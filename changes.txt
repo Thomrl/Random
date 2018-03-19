@@ -1,0 +1,3 @@
+March 19, 2018
+  * Added Dice page
+  * Added Themes on the dice page
