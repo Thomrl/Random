@@ -7,7 +7,6 @@ html, body {
     color: #ffa500;
 }
 
-
 .uInput {
     vertical-align: top;
     height: 70px;
@@ -103,6 +102,16 @@ a h2:hover {
     text-decoration-color: #ffa500;
 }
 
+h2 a {
+    color: #ffa500;
+}
+
+h2 a:hover {
+    color: #ffa500;
+    text-decoration: underline;
+    text-decoration-color: #ffa500;
+}
+
 .yes {
     color: green;
     font-size: 3rem;
@@ -111,4 +120,25 @@ a h2:hover {
 .no {
     color: red;
     font-size: 3rem;
+}
+
+/***************
+******DICE
+****************/
+
+.themes {
+    position: absolute;
+    top:0;
+}
+
+.themes p {
+    display: inline-block;
+}
+
+.themes p:hover {
+    cursor: pointer;
+}
+
+.dice {
+    max-width: 300px;
 }
