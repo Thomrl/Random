@@ -1,6 +1,7 @@
 //  Dice Script
 
 var theme = 'img';
+theme = 'img/orange';
 
 //  JS VAR         =             Class from HTML file
 diceDOM = document.querySelector('.dice');
