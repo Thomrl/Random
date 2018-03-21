@@ -1,3 +1,7 @@
+March 21, 2018
+  * Orange dice theme is now standard.
+
+
 March 19, 2018
   * Added Dice page.
   * Added Themes on the dice page.
