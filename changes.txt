@@ -1,3 +1,8 @@
+April 23, 2018
+  * Added PUBG Coords page. (functionel, not perfect)
+  * Added link to github page on the front page.
+
+
 March 21, 2018
   * Orange dice theme is now standard.
 

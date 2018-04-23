@@ -112,7 +112,30 @@ h2 a:hover {
     font-size: 2rem;
 }
 
+/***************
+**PUBG coords
+****************/
 
+.fitplz {
+    width: 100%;
+}
+
+.pubgGrid table {
+    min-width: 100%;
+    width: 100%;
+    background: url("../img/pubgE.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.pubgGrid td {
+    max-height: 77px;
+    min-height: 40px;
+    padding-top: 12.6%;
+}
+
+.goHere {
+    background-color: rgba(252, 252, 37, 0.3);
+}
 
 /***************
 ****YES OR NO
