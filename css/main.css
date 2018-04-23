@@ -39,7 +39,7 @@ h2 a:hover {
     background-color: #444444;
     border-color: #ffa500;
     color: white;
-    width: 98%;
+    width: 100%;
     border-radius: 5px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -84,6 +84,18 @@ h2 a:hover {
     color: Black;
     box-shadow: 0;
     border-radius: 5px;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.btns4 {
+    margin-bottom: 5px;
+    height: 50px;
+    border-color: #ffa500;
+    background-color: #ffa500;
+    color: Black;
+    box-shadow: 0;
+    border-radius: 5px;
     width: 98%;
     font-size: 2rem;
 }
@@ -116,14 +128,47 @@ h2 a:hover {
 **PUBG coords
 ****************/
 
-.fitplz {
-    width: 100%;
+.maps {
+    float: left;
+    margin: 0 5px;
+}
+
+.coordsDIV {
+    float:right;
+    margin: 0 5px;
+}
+
+.coordsDIV p {
+    display: inline;
+    font-size: 1.9rem;
+}
+
+.maps p {
+    display: inline-block;
+    font-size: 1.9rem;
+}
+
+.maps p:hover {
+    cursor: pointer;
+}
+
+.maps p:first-child {
+    margin-right: 5px;
 }
 
 .pubgGrid table {
     min-width: 100%;
     width: 100%;
+    background-size: 100%;
+}
+
+.pubgE {
     background: url("../img/pubgE.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.pubgM {
+    background: url("../img/pubgM.png") no-repeat;
     background-size: 100%;
 }
 

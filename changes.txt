@@ -1,4 +1,12 @@
 April 23, 2018
+  * Added map selector to PUBG Coords page.
+  * Added Miramar (map) to PUBG Coords page.
+  * Edited UI on PUBG Coords page.
+  * Edited CSS and text on Radom Numer page.
+  * Edited CSS for Decision Decider page.
+
+
+April 23, 2018
   * Added PUBG Coords page. (functionel, not perfect)
   * Added link to github page on the front page.
 
