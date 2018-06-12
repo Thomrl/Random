@@ -1,6 +1,6 @@
 # Random
-I often can't decide! So I made this to help myself and others decide :)
+This will help you decide! :)
 
-So far there is random decision, yes or no, and number
+So far there is random decision, yes or no, number, dice and pubg maps coords
 
-[Changelog](https://github.com/Thomrl/Random/blob/master/changes.txt) - Just added
+[Changelog](https://github.com/Thomrl/Random/blob/master/changes.txt)

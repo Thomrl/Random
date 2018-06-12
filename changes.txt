@@ -1,3 +1,7 @@
+June 13, 2018
+  * Orange dice is now standard in the html.
+  * Miramar map is now a smaller file size (to load faster).
+
 April 23, 2018
   * Added map selector to PUBG Coords page.
   * Added Miramar (map) to PUBG Coords page.
