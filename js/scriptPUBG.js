@@ -30,13 +30,15 @@ function pubgRandom() {
 
 
 
-//Themes
+//Maps
 var map1DOM = document.getElementById('map1');
 var map2DOM = document.getElementById('map2');
+var map3DOM = document.getElementById('map3');
 
 map1DOM.addEventListener('click', function() {
 	document.querySelector('.pubgGrid').classList.remove('pubgE');
 	document.querySelector('.pubgGrid').classList.remove('pubgM');
+	document.querySelector('.pubgGrid').classList.remove('pubgS');
 	document.querySelector('.pubgGrid').classList.add('pubgE');
 });
 
@@ -44,5 +46,14 @@ map1DOM.addEventListener('click', function() {
 map2DOM.addEventListener('click', function(){
 	document.querySelector('.pubgGrid').classList.remove('pubgE');
 	document.querySelector('.pubgGrid').classList.remove('pubgM');
+	document.querySelector('.pubgGrid').classList.remove('pubgS');
 	document.querySelector('.pubgGrid').classList.add('pubgM');
+});
+
+
+map3DOM.addEventListener('click', function(){
+	document.querySelector('.pubgGrid').classList.remove('pubgE');
+	document.querySelector('.pubgGrid').classList.remove('pubgM');
+	document.querySelector('.pubgGrid').classList.remove('pubgS');
+	document.querySelector('.pubgGrid').classList.add('pubgS');
 });

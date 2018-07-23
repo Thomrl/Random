@@ -143,6 +143,10 @@ h2 a:hover {
     font-size: 1.9rem;
 }
 
+#map1:hover, #map2:hover, #map3:hover {
+    text-decoration: underline;
+}
+
 .maps p {
     display: inline-block;
     font-size: 1.9rem;
@@ -169,6 +173,11 @@ h2 a:hover {
 
 .pubgM {
     background: url("../img/pubgM.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.pubgS {
+    background: url("../img/pubgS.jpg") no-repeat;
     background-size: 100%;
 }
 
