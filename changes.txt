@@ -1,3 +1,10 @@
+July 24, 2018
+  * Added R6S Operator selector.
+  * PUBG coords page changes.
+   * The mark is round now!
+   * The mark is more random now!
+
+
 July 23, 2018
   * Added Sanhok (map) to PUBG Coords page.
 

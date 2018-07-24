@@ -8,25 +8,23 @@ coords = document.getElementById('coords');
 
 //Init
 pubgRandom();
-chosen.classList.toggle("goHere");
 
 //Button click, select random
 button.addEventListener('click', pubgResult);
 
 //Select random
 function pubgResult() {
-	chosen.classList.toggle("goHere");
 	pubgRandom()
-	chosen.classList.toggle("goHere");
 };
 
 function pubgRandom() {
-    result1 = list1[Math.floor(Math.random()*list1.length)];
-    result2 = list2[Math.floor(Math.random()*list2.length)];
-    clrow = result1.toLowerCase() + result2.toLowerCase();
+    result1 = Math.floor(Math.random()* 500);
+    result2 = Math.floor(Math.random()* 500);
 	coords.textContent = result1 + ", " + result2;
-	chosen = document.getElementById(clrow);
+	document.querySelector(".goHere").style.marginTop = result1+"px";
+	document.querySelector(".goHere").style.marginLeft = result2+"px";
 }
+
 
 
 
