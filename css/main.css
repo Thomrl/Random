@@ -137,12 +137,14 @@ h2 a:hover {
 **PUBG coords
 ****************/
 
+.pubgDiv {
+    width : 620px;
+}
 
 .pubgGrid{
     width: 620px;
     height: 620px;
 }
-
 
 .maps {
     float: left;
