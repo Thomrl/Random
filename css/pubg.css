@@ -11,15 +11,6 @@ html, body {
     color: #ffa500;
 }
 
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 a h2 {
     color: #ffa500;
 }
@@ -137,15 +128,6 @@ h2 a:hover {
 **PUBG coords
 ****************/
 
-.pubgDiv {
-    width : 620px;
-}
-
-.pubgGrid{
-    width: 620px;
-    height: 620px;
-}
-
 .maps {
     float: left;
     margin: 0 5px;
@@ -206,8 +188,8 @@ h2 a:hover {
 }
 
 .goHere {
-    background-color: rgba(252, 252, 37, 0.3);
-    /*border: 2px rgba(255, 255, 255, 0.692) solid;*/
+    /*background-color: rgba(252, 252, 37, 0.3);*/
+    border: 2px rgba(255, 255, 255, 0.692) solid;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -215,74 +197,6 @@ h2 a:hover {
     margin-top: 500px;
     margin-left: 200px;
 }
-
-/***************
-Rainbow Six Siege
-****************/
-
-.operatorBox {
-    max-width: 350px;
-}
-
-.op-img { border: 1px rgb(99, 99, 99) solid}
-
-.op-badge {
-    margin-top: -620px;
-    margin-left: 250px;
-}
-
-.op-name {
-    font-size: 3rem;
-    color: white;
-    position: relative;
-    margin: auto;
-    margin-top: -70px;
-    text-align: center;
-    text-shadow: -2px 2px black, 0 1px black, 1px 0 black, 0 -1px black;
-    /*background-color: rgba(0, 0, 0, 0.685);*/
-}
-
-#button {
-    margin-top: 20px;
-}
-
-.R6S {
-    color: #36a9e0;
-}
-
-.dongs {
-    font-size: 2.5rem;
-    border: 1px solid #333333;
-    color: white;
-    border-radius: 2px;
-    padding: 5px;
-}
-
-.dongs:hover {
-    border: 1px solid #36a9e0;
-    color: #36a9e0;
-    border-radius: 2px;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.dongsActive {
-    border: 1px solid #ffa500;
-    color: #36a9e0;
-    border: 1px solid #36a9e0;
-
-}
-
-
-.white-text {color:white;}
-
-.closer15 {margin-top: -15px;}
-.closer5 {margin-top: -5px;}
-
-.inline-this {display: inline;}
-
-.copyright {font-size: 0.8rem; color: grey;}
-
 
 /***************
 ****YES OR NO

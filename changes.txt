@@ -1,3 +1,7 @@
+July 25, 2018
+  * PUBG coords page should look better on phones now!
+
+
 July 24, 2018
   * Added R6S Operator selector.
   * PUBG coords page changes.

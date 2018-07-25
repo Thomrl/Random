@@ -6,6 +6,11 @@ var list2 = ["I", "J", "K", "L", "M", "N", "O", "P"];
 button = document.getElementById('pubgGetResult');
 coords = document.getElementById('coords');
 
+//Marking size
+var markArea = 200;
+var mapSize = 620;
+
+
 //Init
 pubgRandom();
 
@@ -18,14 +23,27 @@ function pubgResult() {
 };
 
 function pubgRandom() {
-    result1 = Math.floor(Math.random()* 500);
-    result2 = Math.floor(Math.random()* 500);
+    result1 = Math.floor(Math.random()* markArea);
+    result2 = Math.floor(Math.random()* markArea);
 	coords.textContent = result1 + ", " + result2;
 	document.querySelector(".goHere").style.marginTop = result1+"px";
 	document.querySelector(".goHere").style.marginLeft = result2+"px";
 }
 
-
+if ($(window).width() < 620) {
+	markArea = 310;
+	mapSize = 360;
+	document.querySelector(".goHere").style.width = "50px";
+	document.querySelector(".goHere").style.height = "50px";
+	document.querySelector(".pubgGrid").style.width = mapSize+"px";
+	document.querySelector(".pubgGrid").style.height = mapSize+"px";
+	document.querySelector(".pubgDiv").style.width = "360px";
+    //width: 100px;
+    //height: 100px;
+ }
+ else {
+	var markArea = 500;
+ }
 
 
 //Maps
