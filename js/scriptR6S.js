@@ -8,53 +8,85 @@ var operators = ['Maestro', 'Alibi', 'Lion', 'Finka', 'Vigil', 'Dokkaebi', 'Zofi
 var attackers = ['Lion', 'Finka', 'Dokkaebi', 'Zofia', 'Ying', 'Jackal', 'Hibana', 'Capitão',
  'Blackbeard', 'Buck', 'Sledge', 'Thatcher', 'Ash', 'Thermite', 'Montagne', 'Twitch', 'Blitz', 'IQ', 'Fuze', 'Glaz'];
 
-var deffenders = ['Maestro', 'Alibi', 'Vigil', 'Ela', 'Lesion', 'Mira', 'Echo', 'Caveira', 'Valkyrie',
+var defenders = ['Maestro', 'Alibi', 'Vigil', 'Ela', 'Lesion', 'Mira', 'Echo', 'Caveira', 'Valkyrie',
  'Frost', 'Mute', 'Smoke', 'Castle', 'Pulse', 'Doc', 'Rook', 'Jäger', 'Bandit', 'Tachanka', 'Kapkan'];
 
-var chosen = "Maestro";
 
+//DOM
 DOMattacker = document.querySelector("#attacker");
 DOMdefender = document.querySelector("#defender");
 DOMimg = document.querySelector(".op-img");
 DOMbadge = document.querySelector(".op-badge");
 DOMname = document.querySelector(".op-name");
-
-function randomAttacker() {
-    chosen = attackers[Math.floor(Math.random() * attackers.length)];
-    DOMimg.src = "img/R6S/"+chosen+"1"+".png";
-    DOMbadge.src = "img/R6S/"+chosen+"2"+".png";
-    DOMname.textContent = chosen;
-    DOMdefender.classList.remove('dongsActive');
-    DOMattacker.classList.add('dongsActive');
-    console.log(chosen)
-}
-
-function randomDefender() {
-    chosen = deffenders[Math.floor(Math.random() * deffenders.length)];
-    DOMimg.src = "img/R6S/"+chosen+"1"+".png";
-    DOMbadge.src = "img/R6S/"+chosen+"2"+".png";
-    DOMname.textContent = chosen;
-    DOMdefender.classList.add('dongsActive');
-    DOMattacker.classList.remove('dongsActive');
-    console.log(chosen)
-}
+DOMprimaryWeapon1 = document.getElementById("primaryWeapon1");
+DOMsecondaryWeapon1 = document.getElementById("secondaryWeapon1");
+DOMsecondaryGadget1 = document.getElementById("secondaryGadget1");
+DOMprimaryWeapon2 = document.getElementById("primaryWeapon2");
+DOMsecondaryWeapon2 = document.getElementById("secondaryWeapon2");
+DOMsecondaryGadget2 = document.getElementById("secondaryGadget2");
 
 
-function randomOperator() {
-    chosen = operators[Math.floor(Math.random() * operators.length)];
-    DOMimg.src = "img/R6S/"+chosen+"1"+".png";
-    DOMbadge.src = "img/R6S/"+chosen+"2"+".png";
-    DOMname.textContent = chosen;
-    console.log(chosen)
-}
-
+//Action!
 DOMattacker.addEventListener('click', randomAttacker);
 DOMdefender.addEventListener('click', randomDefender);
 
-        function validate(e) {
-            var text = e.value;
-            //validation of the input...
-        }
+function randomAttacker() {
+    randomOperator(attackers, defenders);
+    DOMattacker.classList.add('dongsActive');
+    DOMdefender.classList.remove('dongsActive');
+}
+
+function randomDefender() {
+    randomOperator(defenders, attackers);
+    DOMdefender.classList.add('dongsActive');
+    DOMattacker.classList.remove('dongsActive');
+}
+
+function randomOperator(operator) {
+    chosen = operator[Math.floor(Math.random() * operator.length)];
+    DOMimg.src = "img/R6S/"+chosen+"1"+".png";
+    DOMbadge.src = "img/R6S/"+chosen+"2"+".png";
+    DOMname.textContent = chosen;
+    loadout();
+    console.log(chosen)
+}
+
+
+//Loadout
+function loadout() {
+    l1 = Math.floor(Math.random() * 2);
+    l2 = Math.floor(Math.random() * 2);
+    l3 = Math.floor(Math.random() * 2);
+    loadoutCheck(l1, DOMprimaryWeapon1, DOMprimaryWeapon2);
+    loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
+    loadoutCheck(l3, DOMsecondaryGadget1, DOMsecondaryGadget2);
+}
+
+function loadoutCheck(LR, option1, option2) {
+    if (LR == 1) {
+        option2.classList.remove('loadoutActive');
+        option1.classList.add('loadoutActive');
+    } else {
+        option1.classList.remove('loadoutActive');
+        option2.classList.add('loadoutActive');
+    }
+}
+
+
+//toggle loadout interface
+var loadoutToggle = 0;
+
+document.getElementById("r6s-toggle-loadout").addEventListener("click", function() {
+    console.log("toggle")
+    if (loadoutToggle == 0) {
+        document.querySelector(".R6SloadOut").style.display = "block";
+        loadoutToggle = 1;
+    } else {
+        document.querySelector(".R6SloadOut").style.display = "none";
+        loadoutToggle = 0;  
+    }
+})
+
 
 //Console print
 console.log("Program loaded");

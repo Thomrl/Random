@@ -283,6 +283,35 @@ Rainbow Six Siege
 
 .copyright {font-size: 0.8rem; color: grey;}
 
+.loadoutCat, .loadoutCat > li {
+    color: white;
+    font-size: 1.5rem;
+    list-style-type: none;
+}
+
+.loadoutLines {
+    width: 60px;
+    height: 5px;
+    background-color: grey;
+    display: inline-block;
+    margin: 5px;
+}
+
+.loadoutActive { background-color: white; }
+
+.R6SloadOut { display: none;}
+
+#r6s-toggle-loadout {
+    position: absolute;
+    right: 1;
+    margin-left: 80px;
+    /*margin-top: 480px;
+    margin-top: 105px;*/
+    margin-top: 105px;      
+    top: 0;
+    font-size: 1.7rem;
+    border: none;
+}
 
 /***************
 ****YES OR NO
