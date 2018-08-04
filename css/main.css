@@ -20,18 +20,17 @@ html, body {
     user-select: none;
 }
 
-a h2 {
-    color: #ffa500;
-}
+.bold {font-weight: bold;}
+
+.spaceUp10 {margin-top: 10px;}
+
+a h2 {color: #ffa500;}
+h2 a {color: #ffa500;}
 
 a h2:hover {
     color: #ffa500;
     text-decoration: underline;
     text-decoration-color: #ffa500;
-}
-
-h2 a {
-    color: #ffa500;
 }
 
 h2 a:hover {
@@ -144,33 +143,50 @@ h2 a:hover {
 .pubgGrid{
     width: 620px;
     height: 620px;
-}
-
-.maps {
-    float: left;
-    margin: 0 5px;
+    margin-top: 5px;
 }
 
 .coordsDIV {
-    float:right;
-    margin: 0 5px;
+    float:left;
+    margin: 0 5px 5px 5px;
+    padding-bottom: 40px;
 }
 
 .coordsDIV p {
     display: inline;
     font-size: 1.9rem;
 }
-
+/*
 #map1:hover, #map2:hover, #map3:hover {
     text-decoration: underline;
+}*/
+
+/*
+.maps {
+    display: none;
+}*/
+
+
+.maps {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.87);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 160px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 200px auto;
 }
 
-.maps p {
-    display: inline-block;
-    font-size: 1.9rem;
+.maps li {
+    font-size: 2rem;
 }
 
-.maps p:hover {
+.maps li:hover {
     cursor: pointer;
 }
 
@@ -199,6 +215,17 @@ h2 a:hover {
     background-size: 100%;
 }
 
+.fortnite {
+    background: url("../img/fortnite.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.ION {
+    background: url("../img/ION.jpg") no-repeat;
+    background-size: 100%;
+}
+
+
 .pubgGrid td {
     max-height: 77px;
     min-height: 40px;
@@ -216,13 +243,43 @@ h2 a:hover {
     margin-left: 200px;
 }
 
+.spaceDown5 {margin-bottom: 5px;}
+.spaceDown10 {margin-bottom: 10px;}
+
+#maps-toggle {   
+    top: 0;
+    font-size: 1.7rem;
+    border: none;
+    float: right;
+}
+
+#close-maps { 
+    color:white;
+    float: right;
+    font-size: 26px;
+    line-height: 1;
+}
+
+#close-maps:hover { 
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.445);
+}
+
+.close {
+    color: white;
+    text-shadow: none;
+}
+
+/*
+#pubgGetResult { border-bottom-color: #ffa500; color: #ffa500}
+#pubgGetResult:hover { border-bottom-color: #36a9e0; color: white;}
+
+*/
 /***************
 Rainbow Six Siege
 ****************/
 
-.operatorBox {
-    max-width: 350px;
-}
+.operatorBox {max-width: 350px;}
 
 .op-img { border: 1px rgb(99, 99, 99) solid}
 
@@ -242,13 +299,9 @@ Rainbow Six Siege
     /*background-color: rgba(0, 0, 0, 0.685);*/
 }
 
-#button {
-    margin-top: 20px;
-}
+#button { margin-top: 20px; }
 
-.R6S {
-    color: #36a9e0;
-}
+.R6S { color: #36a9e0; }
 
 .dongs {
     font-size: 2.5rem;
@@ -272,7 +325,6 @@ Rainbow Six Siege
     border: 1px solid #36a9e0;
 
 }
-
 
 .white-text {color:white;}
 

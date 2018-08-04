@@ -41,6 +41,7 @@ if ($(window).width() < 620) {
     //width: 100px;
     //height: 100px;
  }
+
  else {
 	var markArea = 500;
  }
@@ -50,26 +51,60 @@ if ($(window).width() < 620) {
 var map1DOM = document.getElementById('map1');
 var map2DOM = document.getElementById('map2');
 var map3DOM = document.getElementById('map3');
+var map4DOM = document.getElementById('map4');
+var map5DOM = document.getElementById('map5');
 
-map1DOM.addEventListener('click', function() {
+function removeMaps() {
 	document.querySelector('.pubgGrid').classList.remove('pubgE');
 	document.querySelector('.pubgGrid').classList.remove('pubgM');
 	document.querySelector('.pubgGrid').classList.remove('pubgS');
+	document.querySelector('.pubgGrid').classList.remove('fortnite');
+	document.querySelector('.pubgGrid').classList.remove('ION');
+}
+
+
+map1DOM.addEventListener('click', function() {
+	removeMaps();
 	document.querySelector('.pubgGrid').classList.add('pubgE');
 });
 
 
 map2DOM.addEventListener('click', function(){
-	document.querySelector('.pubgGrid').classList.remove('pubgE');
-	document.querySelector('.pubgGrid').classList.remove('pubgM');
-	document.querySelector('.pubgGrid').classList.remove('pubgS');
+	removeMaps();
 	document.querySelector('.pubgGrid').classList.add('pubgM');
 });
 
 
 map3DOM.addEventListener('click', function(){
-	document.querySelector('.pubgGrid').classList.remove('pubgE');
-	document.querySelector('.pubgGrid').classList.remove('pubgM');
-	document.querySelector('.pubgGrid').classList.remove('pubgS');
+	removeMaps();
 	document.querySelector('.pubgGrid').classList.add('pubgS');
 });
+
+
+map4DOM.addEventListener('click', function(){
+	removeMaps();
+	document.querySelector('.pubgGrid').classList.add('fortnite');
+});
+
+
+map5DOM.addEventListener('click', function(){
+	removeMaps();
+	document.querySelector('.pubgGrid').classList.add('ION');
+});
+
+var mapsToggle = 0;
+
+document.getElementById("close-maps").addEventListener("click", function() {
+	document.querySelector(".maps").style.display = "none";
+	mapsToggle = 0;
+})
+
+document.getElementById("maps-toggle").addEventListener("click", function() {
+	if (mapsToggle == 1) {
+		document.querySelector(".maps").style.display = "none";
+		mapsToggle = 0;
+	} else {
+		document.querySelector(".maps").style.display = "block";
+	    mapsToggle = 1;
+	}
+})

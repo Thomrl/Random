@@ -1,6 +1,11 @@
-July 26, 2018
+August 4, 2018
+  * Added fortnite and islands of nyne maps to the pubg site!
+  * A little design change on the pubg site.
+
+
+  July 26, 2018
   * PUBG coords page looks better on phones confirmed!
-  * R6S Operator selector now has
+  * R6S Operator selector now has.
   
   
   July 25, 2018

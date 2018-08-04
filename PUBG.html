@@ -9,22 +9,41 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <title>Random | PUBG Coords</title>
     </head>
     <body id="theFreakingBody">
                 <center>
                     <div class="pubgDiv">
                         <a href="index.html"><h2>Random</h2></a>
-                        <div class="maps"><p>Maps: </p><p id="map1">Erangel</p><p> | </p><p id="map2">Miramar</p><p> | </p><p id="map3">Sanhok</p></div>
-                        <div class="coordsDIV"><p>Coords: </p><p id="coords">-</p></div>
-                        <button id="pubgGetResult" class="boxboxplease btns">Select</button>
+                        <div class="coordsDIV">
+                            <p>Coords: </p><p id="coords">-</p>
+                        </div>
+                        <div>
+                            <li id="maps-toggle" class="inline-this dongs unselectable white-text closer5"><i class="fas fa-map"></i> Maps</li>
+                        </div>
+                        <br>
                         <div class="pubgGrid pubgE">
                         <div class="goHere"></div>
                     </div>
+                    <button id="pubgGetResult" class="boxboxplease btns">Select</button>
+                    <br>
                     <div class="copyright">
                         This website is not affiliated with, maintained, authorized, endorsed or sponsored by <a href="https://www.bluehole.net/en/main">Bluehole Inc.</a> or any of its affiliates. This is an independent, unofficial site. All product or brand names are trademarks of their respective owners.
                     </div>
                 </center>
+                <div class="maps loadoutCat">
+                    <div id="close-maps">
+                        <p>x</p>
+                    </div>
+                        <li class="spaceDown10 bold">PUBG</li>
+                        <li id="map1" class="inline-this dongs">Erangel</li>
+                        <li id="map2" class="inline-this dongs">Miramar</li>
+                        <li id="map3" class="inline-this dongs">Sanhok</li>
+                        <li class="spaceUp10 spaceDown10 bold">Other Games</li>
+                        <li id="map4" class="inline-this dongs">Fortnite</li>
+                        <li id="map5" class="inline-this dongs">Island Of Nyne</li>
+                </div>
 
     <script src="js/scriptPUBG.js"></script>
     <script src="js/bootstrap.min.js"></script>
