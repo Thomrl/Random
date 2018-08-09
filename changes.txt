@@ -1,3 +1,7 @@
+August 9, 2018
+  * Made the gaming part of the front page prettier.
+
+
 August 4, 2018
   * Added fortnite and islands of nyne maps to the pubg site!
   * A little design change on the pubg site.

@@ -309,6 +309,11 @@ Rainbow Six Siege
     color: white;
     border-radius: 2px;
     padding: 5px;
+    list-style-type: none;
+}
+
+.white-border {
+    border-color: white;
 }
 
 .dongs:hover {
