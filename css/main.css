@@ -22,7 +22,11 @@ html, body {
 
 .bold {font-weight: bold;}
 
+.spaceUp5 {margin-top: 5px;}
+
 .spaceUp10 {margin-top: 10px;}
+
+.noTextDecoration:hover {text-decoration: none;}
 
 a h2 {color: #ffa500;}
 h2 a {color: #ffa500;}
@@ -322,6 +326,7 @@ Rainbow Six Siege
     border-radius: 2px;
     padding: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .dongsActive {
@@ -352,6 +357,10 @@ Rainbow Six Siege
     background-color: grey;
     display: inline-block;
     margin: 5px;
+}
+
+#primaryWeapon3 {
+    display: none;
 }
 
 .loadoutActive { background-color: white; }
