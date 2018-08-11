@@ -20,14 +20,6 @@ html, body {
     user-select: none;
 }
 
-.bold {font-weight: bold;}
-
-.spaceUp5 {margin-top: 5px;}
-
-.spaceUp10 {margin-top: 10px;}
-
-.noTextDecoration:hover {text-decoration: none;}
-
 a h2 {color: #ffa500;}
 h2 a {color: #ffa500;}
 
@@ -140,9 +132,7 @@ h2 a:hover {
 **PUBG coords
 ****************/
 
-.pubgDiv {
-    width : 620px;
-}
+.pubgDiv {width : 620px;}
 
 .pubgGrid{
     width: 620px;
@@ -160,16 +150,6 @@ h2 a:hover {
     display: inline;
     font-size: 1.9rem;
 }
-/*
-#map1:hover, #map2:hover, #map3:hover {
-    text-decoration: underline;
-}*/
-
-/*
-.maps {
-    display: none;
-}*/
-
 
 .maps {
     display: none;
@@ -186,17 +166,9 @@ h2 a:hover {
     margin: 200px auto;
 }
 
-.maps li {
-    font-size: 2rem;
-}
-
-.maps li:hover {
-    cursor: pointer;
-}
-
-.maps p:first-child {
-    margin-right: 5px;
-}
+.maps li {font-size: 2rem;}
+.maps li:hover {cursor: pointer;}
+.maps p:first-child { margin-right: 5px;}
 
 .pubgGrid table {
     min-width: 100%;
@@ -204,30 +176,12 @@ h2 a:hover {
     background-size: 100%;
 }
 
-.pubgE {
-    background: url("../img/pubgE.jpg") no-repeat;
-    background-size: 100%;
-}
-
-.pubgM {
-    background: url("../img/pubgM.jpg") no-repeat;
-    background-size: 100%;
-}
-
-.pubgS {
-    background: url("../img/pubgS.jpg") no-repeat;
-    background-size: 100%;
-}
-
-.fortnite {
-    background: url("../img/fortnite.jpg") no-repeat;
-    background-size: 100%;
-}
-
-.ION {
-    background: url("../img/ION.jpg") no-repeat;
-    background-size: 100%;
-}
+/* MAPS */
+.pubgE { background: url("../img/pubgE.jpg") no-repeat; background-size: 100%; }
+.pubgM { background: url("../img/pubgM.jpg") no-repeat; background-size: 100%; }
+.pubgS { background: url("../img/pubgS.jpg") no-repeat; background-size: 100%; }
+.fortnite { background: url("../img/fortnite.jpg") no-repeat; background-size: 100%; }
+.ION {background: url("../img/ION.jpg") no-repeat; background-size: 100%; }
 
 
 .pubgGrid td {
@@ -238,7 +192,7 @@ h2 a:hover {
 
 .goHere {
     background-color: rgba(252, 252, 37, 0.3);
-    /*border: 2px rgba(255, 255, 255, 0.692) solid;*/
+    border: 0px rgba(255, 255, 255, 0.692) solid;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -246,9 +200,6 @@ h2 a:hover {
     margin-top: 500px;
     margin-left: 200px;
 }
-
-.spaceDown5 {margin-bottom: 5px;}
-.spaceDown10 {margin-bottom: 10px;}
 
 #maps-toggle {   
     top: 0;
@@ -277,7 +228,6 @@ h2 a:hover {
 /*
 #pubgGetResult { border-bottom-color: #ffa500; color: #ffa500}
 #pubgGetResult:hover { border-bottom-color: #36a9e0; color: white;}
-
 */
 /***************
 Rainbow Six Siege
@@ -316,10 +266,6 @@ Rainbow Six Siege
     list-style-type: none;
 }
 
-.white-border {
-    border-color: white;
-}
-
 .dongs:hover {
     border: 1px solid #36a9e0;
     color: #36a9e0;
@@ -336,15 +282,6 @@ Rainbow Six Siege
 
 }
 
-.white-text {color:white;}
-
-.closer15 {margin-top: -15px;}
-.closer5 {margin-top: -5px;}
-
-.inline-this {display: inline;}
-
-.copyright {font-size: 0.8rem; color: grey;}
-
 .loadoutCat, .loadoutCat > li {
     color: white;
     font-size: 1.5rem;
@@ -359,9 +296,7 @@ Rainbow Six Siege
     margin: 5px;
 }
 
-#primaryWeapon3 {
-    display: none;
-}
+#primaryWeapon3 { display: none;}
 
 .loadoutActive { background-color: white; }
 
@@ -383,33 +318,48 @@ Rainbow Six Siege
 ****YES OR NO
 ****************/
 
-.yes {
-    color: #00E500;
-    font-size: 3rem;
-}
+.yes {color: #00E500; font-size: 3rem;}
 
-.no {
-    color: red;
-    font-size: 3rem;
-}
+.no {color: red; font-size: 3rem;}
 
 /***************
 ******DICE
 ****************/
 
-.themes {
-    position: absolute;
-    top:0;
-}
+.themes {position: absolute; top:0;}
 
-.themes p {
-    display: inline-block;
-}
+.themes p {display: inline-block;}
 
-.themes p:hover {
-    cursor: pointer;
-}
+.themes p:hover {cursor: pointer;}
 
-.dice {
-    max-width: 300px;
-}
+.dice {max-width: 300px;}
+
+/**************
+ D E C I D E R
+***************/
+#resultHere {position: absolute; text-align: center; width: 100%; left: 0; right: 0;}
+
+/*************
+ G E N E R A L
+**************/
+
+
+.bold {font-weight: bold;}
+
+.spaceUp5 {margin-top: 5px;}
+.spaceUp10 {margin-top: 10px;}
+
+.spaceDown5 {margin-bottom: 5px;}
+.spaceDown10 {margin-bottom: 10px;}
+
+.closer5 {margin-top: -5px;}
+.closer15 {margin-top: -15px;}
+
+.white-border {border-color: white;}
+.white-text {color:white;}
+
+.inline-this {display: inline;}
+
+.copyright {font-size: 0.8rem; color: grey;}
+
+.noTextDecoration:hover {text-decoration: none;}

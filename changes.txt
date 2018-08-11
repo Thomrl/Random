@@ -1,6 +1,14 @@
+August 11, 2018
+  * A bit of cleaning in css.
+  * A bit of cleaning in js for R6S Random Operator.
+  * Small changes on Random number and decision deicder.
+  * Trying to make the dice change on shake with a script from https://github.com/alexgibson/shake.js.
+
+
 August 10, 2018
   * R6S Operator loadout - Amount of weapons now changes according to the operator.
   * Fixed the Random Gaming buttons on the front page.
+
 
 August 9, 2018
   * Made the gaming part of the front page prettier.
@@ -11,12 +19,12 @@ August 4, 2018
   * A little design change on the pubg site.
 
 
-  July 26, 2018
+July 26, 2018
   * PUBG coords page looks better on phones confirmed!
   * R6S Operator selector now has.
   
   
-  July 25, 2018
+July 25, 2018
   * PUBG coords page should look better on phones now!
 
 
@@ -40,7 +48,7 @@ April 23, 2018
   * Added map selector to PUBG Coords page.
   * Added Miramar (map) to PUBG Coords page.
   * Edited UI on PUBG Coords page.
-  * Edited CSS and text on Radom Numer page.
+  * Edited CSS and text on Radom Number page.
   * Edited CSS for Decision Decider page.
 
 

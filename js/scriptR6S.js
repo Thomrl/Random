@@ -70,6 +70,7 @@ var wepCat = [['Finka', 'Lion', 'IQ', 'Fuze', 'Twitch', 'Doc', 'Rook', 'Thatcher
 ['Ying', 'Zofia', 'Blitz', 'Mute', 'Lesion', 'Ela', 'Thatcher', 'IQ', 'Jäger', 'Bandit', 'Buck', 'Frost', 'Blackbeard', 'Valkyrie', 'Capitão', 'Caveira']]; // 1 Secondary Weapon
 
 var foundHere = "nowhere";
+var boop = 0;
 
 function wepCatCheck(x, chosen) {
     //console.log("The beginning of wepCatCheck!! - Checking: wepCat"+x+" for "+chosen);
@@ -110,31 +111,24 @@ function loadout() {
     if (primaryCap == 3 && secondaryCap == 1) {
         DOMprimaryWeapon3.style.display = "inline-block";
         DOMsecondaryWeapon2.style.display = "none";
-        loadoutCheckPlus(l1, DOMprimaryWeapon1, DOMprimaryWeapon2, DOMprimaryWeapon3);
-        loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
     } else if (primaryCap == 1 && secondaryCap == 1) {
         DOMprimaryWeapon2.style.display = "none";
-        DOMprimaryWeapon3.style.display = "none";
         DOMsecondaryWeapon2.style.display = "none";
-        loadoutCheckPlus(l1, DOMprimaryWeapon1, DOMprimaryWeapon2, DOMprimaryWeapon3);
-        loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
     } else if (primaryCap == 1) {
         DOMprimaryWeapon2.style.display = "none";
-        DOMprimaryWeapon3.style.display = "none";
-        loadoutCheckPlus(l1, DOMprimaryWeapon1, DOMprimaryWeapon2, DOMprimaryWeapon3);
-        loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
     } else if (primaryCap == 3) {
         DOMprimaryWeapon3.style.display = "inline-block";
-        loadoutCheckPlus(l1, DOMprimaryWeapon1, DOMprimaryWeapon2, DOMprimaryWeapon3);
-        loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
     } else if (secondaryCap == 1) {
         DOMsecondaryWeapon2.style.display = "none";
-        loadoutCheck(l1, DOMprimaryWeapon1, DOMprimaryWeapon2);
-        loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
+    } else {
+        boop++
+    }
+    if (primaryCap == 3) {
+        loadoutCheckPlus(l1, DOMprimaryWeapon1, DOMprimaryWeapon2, DOMprimaryWeapon3);
     } else {
         loadoutCheck(l1, DOMprimaryWeapon1, DOMprimaryWeapon2);
-        loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
     }
+    loadoutCheck(l2, DOMsecondaryWeapon1, DOMsecondaryWeapon2);
     loadoutCheck(l3, DOMsecondaryGadget1, DOMsecondaryGadget2);
 }
 

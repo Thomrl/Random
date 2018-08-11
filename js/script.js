@@ -8,6 +8,8 @@
             var splitData = userInput.split(",");
             var findRandom = splitData[Math.floor(Math.random() * splitData.length)];
             resultOutput.textContent = findRandom;
+            resultOutput.style.color = "white";
+            resultOutput.style.fontSize = "2rem";
         }
 
         window.addEventListener("keydown", function(e) {
