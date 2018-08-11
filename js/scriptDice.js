@@ -44,8 +44,8 @@ document.querySelector('#color2').addEventListener('click', function() {
 
 
 var myShakeEvent = new Shake({
-    threshold: 3, // optional shake strength threshold
-    timeout: 5 // optional, determines the frequency of event generation
+    threshold: 7, // optional shake strength threshold
+    timeout: 50 // optional, determines the frequency of event generation
 });
 
 myShakeEvent.start();
