@@ -1,3 +1,8 @@
+August 26, 2018
+  * Maverick and Clash added to Random R6S operator page.
+  * Test operator on/off added to Random R6S operator page.
+
+
 August 11, 2018
   * A bit of cleaning in css.
   * A bit of cleaning in js for R6S Random Operator.

@@ -6,10 +6,10 @@ var operators = ['Maestro', 'Alibi', 'Lion', 'Finka', 'Vigil', 'Dokkaebi', 'Zofi
     'Bandit', 'Blitz', 'IQ', 'Fuze', 'Glaz', 'Tachanka', 'Kapkan'];
 
 var attackers = ['Lion', 'Finka', 'Dokkaebi', 'Zofia', 'Ying', 'Jackal', 'Hibana', 'Capitão',
- 'Blackbeard', 'Buck', 'Sledge', 'Thatcher', 'Ash', 'Thermite', 'Montagne', 'Twitch', 'Blitz', 'IQ', 'Fuze', 'Glaz'];
+ 'Blackbeard', 'Buck', 'Sledge', 'Thatcher', 'Ash', 'Thermite', 'Montagne', 'Twitch', 'Blitz', 'IQ', 'Fuze', 'Glaz', 'Maverick'];
 
 var defenders = ['Maestro', 'Alibi', 'Vigil', 'Ela', 'Lesion', 'Mira', 'Echo', 'Caveira', 'Valkyrie',
- 'Frost', 'Mute', 'Smoke', 'Castle', 'Pulse', 'Doc', 'Rook', 'Jäger', 'Bandit', 'Tachanka', 'Kapkan'];
+ 'Frost', 'Mute', 'Smoke', 'Castle', 'Pulse', 'Doc', 'Rook', 'Jäger', 'Bandit', 'Tachanka', 'Kapkan', 'Clash'];
 
 //DOM
 DOMattacker = document.querySelector("#attacker");
@@ -46,6 +46,7 @@ function randomOperator(operator) {
     chosen = operator[Math.floor(Math.random() * operator.length)];
     DOMimg.src = "img/R6S/"+chosen+"1"+".png";
     DOMbadge.src = "img/R6S/"+chosen+"2"+".png";
+    DOMimg.style.width = "352px";
     DOMname.textContent = chosen;
     console.log(chosen)
     primaryCap = 2;
@@ -66,8 +67,8 @@ var primaryCap = 2;
 var secondaryCap = 2;
 
 var wepCat = [['Finka', 'Lion', 'IQ', 'Fuze', 'Twitch', 'Doc', 'Rook', 'Thatcher', 'Jackal'], // 3 Primary Weapons
-['Blitz', 'Montagne', 'Glaz'], // 1 Primary Weapon
-['Ying', 'Zofia', 'Blitz', 'Mute', 'Lesion', 'Ela', 'Thatcher', 'IQ', 'Jäger', 'Bandit', 'Buck', 'Frost', 'Blackbeard', 'Valkyrie', 'Capitão', 'Caveira']]; // 1 Secondary Weapon
+['Blitz', 'Montagne', 'Glaz', 'Clash'], // 1 Primary Weapon
+['Ying', 'Zofia', 'Blitz', 'Mute', 'Lesion', 'Ela', 'Thatcher', 'IQ', 'Jäger', 'Bandit', 'Buck', 'Frost', 'Blackbeard', 'Valkyrie', 'Capitão', 'Caveira', 'Maverick']]; // 1 Secondary Weapon
 
 var foundHere = "nowhere";
 var boop = 0;
@@ -169,6 +170,39 @@ document.getElementById("r6s-toggle-loadout").addEventListener("click", function
         loadoutToggle = 0;  
     }
 })
+
+//test operators
+var testOpStatus = 0;
+
+DOMtestToggle = document.getElementById("test-toggle");
+DOMtestToggle.innerHTML = '<i class="fas fa-plus-circle"></i> ON '
+
+document.getElementById("test-toggle").addEventListener("click", function() {
+    console.log("testToggle");
+    if (testOpStatus == 0) {
+        DOMtestToggle.style.backgroundColor = "#FE2020";
+        DOMtestToggle.innerHTML = '<i class="fas fa-minus-circle"></i> OFF';
+        attackers.pop();
+        defenders.pop();
+        testOpStatus = 1;
+    } else {
+        DOMtestToggle.style.backgroundColor = "rgb(5, 138, 5";
+        DOMtestToggle.innerHTML = '<i class="fas fa-plus-circle"></i> ON ';
+        attackers.push("Maverick");
+        defenders.push("Clash");
+        testOpStatus = 0;
+    };
+});
+
+document.getElementById("test-toggle").addEventListener("mouseenter", function() {
+    DOMtestToggle.style.opacity = "0.7";
+})
+
+document.getElementById("test-toggle").addEventListener("mouseleave", function() {
+    DOMtestToggle.style.opacity = "1";
+})
+
+
 
 
 //Console print

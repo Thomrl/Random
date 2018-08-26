@@ -236,7 +236,12 @@ Rainbow Six Siege
 .operatorBox {max-width: 350px;}
 
 .op-img { border: 1px rgb(99, 99, 99) solid}
-
+/*
+.op-img img {
+    height: 350px;
+    width: 350px;
+}
+*/
 .op-badge {
     margin-top: -620px;
     margin-left: 250px;
@@ -312,6 +317,18 @@ Rainbow Six Siege
     top: 0;
     font-size: 1.7rem;
     border: none;
+}
+
+#test-toggle {
+    font-size: 1.3rem;
+    background-color: rgb(5, 138, 5);
+    color: white;
+    border-color: white;
+}
+
+#test-toggle:hover {
+    color: #ffffff;
+    border-color: white;
 }
 
 /***************
