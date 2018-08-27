@@ -1,3 +1,7 @@
+August 27, 2018
+  * Added about to frontpage.
+
+
 August 26, 2018
   * Maverick and Clash added to Random R6S operator page.
   * Test operator on/off added to Random R6S operator page.
