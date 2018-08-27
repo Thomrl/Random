@@ -35,6 +35,37 @@ h2 a:hover {
     text-decoration-color: #ffa500;
 }
 
+#about {
+    display: none;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    top:0;
+    left: 0;
+    right: 0;
+    margin: 100px auto 0 auto;
+    vertical-align: baseline;
+}
+/*
+#close-window {
+    position: absolute;
+    margin-top: -20px;  
+    font-size: 2.5rem;
+}*/
+
+#close-window {
+    font-size: 2.3rem;
+    margin-top: -5px;
+}
+
+#close-window:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.329);
+}
+
 .uInput {
     vertical-align: top;
     height: 70px;
@@ -136,24 +167,9 @@ h2 a:hover {
 
 #about p {font-size: 1.2rem;}
 
-/***************
-    FRONTPAGE
-****************/
+a { cursor:pointer;}
 
-#about {
-    display: none;
-    position: fixed;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 100px auto;
-}
+#show-less-copyright, #more-copyright {display: none;}
 
 
 /***************
@@ -371,11 +387,16 @@ Rainbow Six Siege
 ******DICE
 ****************/
 
-.themes {position: absolute; top:0;}
+.themes {}
 
 .themes p {display: inline-block;}
 
 .themes p:hover {cursor: pointer;}
+
+#color1 {color: orange}
+#color2 {color: #EB4D4D}
+
+
 
 .dice {max-width: 300px;}
 

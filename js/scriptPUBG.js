@@ -108,3 +108,41 @@ document.getElementById("maps-toggle").addEventListener("click", function() {
 	    mapsToggle = 1;
 	}
 })
+
+
+//copyright
+DOMshowLessCopyright = document.getElementById("show-less-copyright");
+DOMshowMoreCopyright = document.getElementById("show-more-copyright");
+DOMshowMoreCopyright.addEventListener("click", function(){
+	document.getElementById("more-copyright").style.display = "block";
+	DOMshowLessCopyright.style.display = "block";
+	document.getElementById("show-more-copyright").style.display = "none";
+	document.getElementById("short-copyright").style.display = "none";
+})
+
+DOMshowLessCopyright.addEventListener("click", function(){
+	document.getElementById("more-copyright").style.display = "none";
+	DOMshowLessCopyright.style.display = "none";
+	document.getElementById("show-more-copyright").style.display = "inline-block";
+	document.getElementById("short-copyright").style.display = "block";
+})
+
+
+//About
+DOMaboutOpen = document.getElementById("about-open");
+DOMcloseWindow = document.getElementById("close-window");
+DOMcloseWindowButton = document.getElementById("close-window-button");
+DOMabout = document.getElementById("about");
+
+
+DOMaboutOpen.addEventListener("click", function() {
+    DOMabout.style.display = "block";
+})
+
+DOMcloseWindow.addEventListener("click", function() {
+    DOMabout.style.display = "none";
+})
+
+DOMcloseWindowButton.addEventListener("click", function() {
+    DOMabout.style.display = "none";
+})

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="theFreakingHTML">
+<html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <title>Random | PUBG Coords</title>
     </head>
-    <body id="theFreakingBody">
+    <body>
         <center>
             <div class="pubgDiv">
                 <a href="index.html"><h2>Random</h2></a>
@@ -28,13 +28,15 @@
                 </div>
                  <button id="pubgGetResult" class="boxboxplease btns">Select</button>
                  <br>
-                <div class="copyright">
-                    This website is not affiliated with, maintained, authorized, endorsed or sponsored by <a href="https://www.bluehole.net/en/main">Bluehole Inc.</a> or any of its affiliates. This is an independent, unofficial site. All product or brand names are trademarks of their respective owners.
-                    <br><br>
-                    Fortnite is property of Epic Games, Inc. This website and its creator are not associated with nor endorsed by Fortnite or Epic Games, Inc.
-                    <br><br>
-                    Islands Of Nyne is property of define human studios. This website and its creator are not associated with nor endorsed by Fortnite or define human studios.
+                 
+                 <div class="row info-links">
+                    
+                    <div class="col-sm-12">
+                        <a id="about-open"><i class="fas fa-info-circle"></i> About</a>
+                    </div>
                 </div>
+                <br>
+                
             </div>
         </center>
         <div class="maps loadoutCat">
@@ -48,6 +50,46 @@
             <li class="spaceUp10 spaceDown10 bold">Other Games</li>
             <li id="map4" class="inline-this dongs">Fortnite</li>
             <li id="map5" class="inline-this dongs">Island Of Nyne</li>
+        </div>
+
+        <div id="about">
+            <ul>
+                <li class="inline-this">
+                    <h3 class="inline-this">About Random</h3>
+                </li>
+                <li id="close-window" class="inline-this closeWindow floatRight">
+                    <!--ALT+0160--> <!--ALT+0160--><i class="fas fa-times"></i><!--ALT+0160--> <!--ALT+0160--><!-- Close window (x) -->
+                </li>
+            </ul>
+            <hr>
+            <p>Random location picker for PUBG, Fortnite and Islands of Nyne. <br>Site by <a href="https://github.com/Thomrl">Thomrl</a></p>
+            <hr>
+            <h3>Credits</h3>
+            <ul>
+                <li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a></li>
+                <li><a target="_blank" href="https://jquery.com/">jQuery</a></li>
+                <li><a target="_blank" href="https://fontawesome.com/">FontAwesome</a></li>
+                <li><a target="_blank" href="https://github.com/">Github</a></li>
+                <li><a target="_blank" href="https://www.pubg.com/">PlayerUnkown's Battlegrounds</a></li>
+                <li><a target="_blank" href="https://www.epicgames.com/fortnite/en-US/home">Fortnite</a></li>
+                <li><a target="_blank" href="https://islandsofnyne.com/">Islands of Nyne</a></li>
+            </ul>
+            <hr>
+            <div class="copyright">
+                <a id="show-less-copyright">Show less..</a>
+                <span id="short-copyright">This website is not affiliated with, maintained, authorized, endorsed or sponsored by.. <a id="show-more-copyright">show more</a></span>
+                <span id="more-copyright">This website is not affiliated with, maintained, authorized, endorsed or sponsored by <a href="https://www.bluehole.net/en/main">Bluehole Inc.</a> or any of its affiliates. This is an independent, unofficial site. All product or brand names are trademarks of their respective owners.
+                <br><br>
+                Fortnite is property of Epic Games, Inc. This website and its creator are not associated with nor endorsed by Fortnite or Epic Games, Inc.
+                <br><br>
+                Islands Of Nyne is property of define human studios. This website and its creator are not associated with nor endorsed by Fortnite or define human studios.</span>
+            </div>
+            <hr>
+            <div class="info-links">
+                <a href="https://github.com/Thomrl/Random">source code</a>
+                <a href="https://thomrl.github.io/Random/changes.txt">Changelog</a>
+                <button id="close-window-button" type="button" class="btn btn-primary floatRight spaceDown10">Close</button>
+            </div>
         </div>
 
     <script src="js/scriptPUBG.js"></script>

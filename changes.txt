@@ -1,5 +1,13 @@
 August 27, 2018
-  * Added about to frontpage.
+  * Added the about window about the site, with credits to things used, and other information.
+    * Added about to frontpage.
+    * Added link to changelog in about.
+    * Added about to Battle Royale Location Picker (PUBG.html).
+    * Added about to Rainbow Six: Siege operator.
+    * Added about to Dice.
+    * Copyright notice moved to about for sites that needed it.
+    * Fixed the text and X button at the top of the about window.
+  * Edited and moved color picker on the Dice page.
 
 
 August 26, 2018
