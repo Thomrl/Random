@@ -1,4 +1,8 @@
-August 27, 2018
+August 31, 2018
+  * Decider and Yes or No, has been moved to frontpage.
+
+
+  August 27, 2018
   * Added the about window about the site, with credits to things used, and other information.
     * Added about to frontpage.
     * Added link to changelog in about.

@@ -1,6 +1,7 @@
         var resultOutput = document.getElementById("resultHere");
         var resultButton = document.getElementById("getResult");
 
+        resultOutput.style.fontSize = "30px";
         resultButton.addEventListener("click", getTheResult);
 
         function getTheResult() {

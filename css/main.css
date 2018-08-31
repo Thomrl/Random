@@ -11,6 +11,11 @@ html, body {
     color: #ffa500;
 }
 
+#decider {
+    display: none;
+}
+
+
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -403,7 +408,7 @@ Rainbow Six Siege
 /**************
  D E C I D E R
 ***************/
-#resultHere {position: absolute; text-align: center; width: 100%; left: 0; right: 0;}
+#resultHere {position: absolute; text-align: center; width: 100%; left: 0; right: 0; font-size: 1.5rem;}
 
 /*************
  G E N E R A L
@@ -417,6 +422,8 @@ Rainbow Six Siege
 
 .spaceDown5 {margin-bottom: 5px;}
 .spaceDown10 {margin-bottom: 10px;}
+
+.spaceRight10 {margin-right: 10px;}
 
 .closer5 {margin-top: -5px;}
 .closer15 {margin-top: -15px;}
