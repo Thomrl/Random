@@ -24,15 +24,15 @@
                         <div class="row">
                             <br>
                             <div class="col-sm-6">
-                                <a id="menu-YON"><button class="btns">Yes Or No</button></a>
+                                <a href="?YON" id="menu-YON"><button class="btns">Yes Or No</button></a>
                             </div>
                             <div class="col-sm-6">
-                                <a id="menu-decider"><button class="btns">Decider</button></a>
+                                <a href="?decider" id="menu-decider"><button class="btns">Decider</button></a>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <a href="RNG.html"><button class="btns">Random Number</button></a>
+                                <a href="?RNG"><button class="btns">Random Number</button></a>
                             </div>
                             <div class="col-sm-6">
                                 <a href="dice.html"><button class="btns">Dice</button></a>
@@ -43,8 +43,6 @@
                             <div class="col-sm-12">
                                 <p>You can click on "Random" to go back to this "menu".</p>
                                 
-                                <a href="YorN.html" class="spaceRight10">Yes or No (old)</a>
-                                <a href="Decider.html">Decider (old)</a>
                                 <h2 class="white-text">Random Gaming</h2>
                             </div>
                         </div>
@@ -63,13 +61,17 @@
                     <!--/////  Decider/Yes or No   /////-->
                     <div id="decider">
                         
-                        <a href="index.html"><h2>Random</h2></a>
+                        <a href="?"><h2>Random</h2></a>
                         <h3>I choose</h3>
                         <p id="resultHere">Let me think..</p>
                         <br><br><br>
                         <div id="uInputReset">
                             
                             <textarea id="uInput" class="boxboxplease uInput" placeholder="Type different things in here. Use comma , to split them up."></textarea>
+                        </div>
+                        <div class="rngElement">
+                            <input id="uInput1" type="tel" class="inputs" value="1"/>
+                            <input id="uInput2" type="tel" class="inputs" value="100"/>
                         </div>
                         <button id="getResult" class="boxboxplease btns">Decide</button>
                         <p id="inputHere"></p>

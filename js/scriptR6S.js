@@ -172,10 +172,13 @@ document.getElementById("r6s-toggle-loadout").addEventListener("click", function
 })
 
 //test operators
+/*
 var testOpStatus = 0;
 
 DOMtestToggle = document.getElementById("test-toggle");
 DOMtestToggle.innerHTML = '<i class="fas fa-plus-circle"></i> ON '
+
+
 
 document.getElementById("test-toggle").addEventListener("click", function() {
     console.log("testToggle");
@@ -201,7 +204,7 @@ document.getElementById("test-toggle").addEventListener("mouseenter", function()
 document.getElementById("test-toggle").addEventListener("mouseleave", function() {
     DOMtestToggle.style.opacity = "1";
 })
-
+*/
 
 //About
 DOMaboutOpen = document.getElementById("about-open");

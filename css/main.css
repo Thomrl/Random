@@ -71,6 +71,12 @@ h2 a:hover {
     background-color: rgba(255, 0, 0, 0.329);
 }
 
+.rngElement {
+    display: none;
+}
+
+
+
 .uInput {
     vertical-align: top;
     height: 70px;
@@ -392,7 +398,6 @@ Rainbow Six Siege
 ******DICE
 ****************/
 
-.themes {}
 
 .themes p {display: inline-block;}
 

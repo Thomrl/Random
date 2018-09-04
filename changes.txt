@@ -1,8 +1,14 @@
+September 4, 2018
+  * When clicking back from Decider and Yes or No, you go back to the frontpage again.
+  * RNG has been moved to frontpage.
+  * On/off for test operators has been removed from the Random R6S operator page, now that the there's no longer test operators.
+
+
 August 31, 2018
   * Decider and Yes or No, has been moved to frontpage.
 
 
-  August 27, 2018
+August 27, 2018
   * Added the about window about the site, with credits to things used, and other information.
     * Added about to frontpage.
     * Added link to changelog in about.
