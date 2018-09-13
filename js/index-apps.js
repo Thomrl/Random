@@ -10,6 +10,8 @@ if (windowLoc == "RNG") {
     document.getElementById("uInput").style.display = "none";
     document.querySelector(".rngElement").style.display = "block";
     document.title = "RNG | Random";
+    document.getElementById("about-dice").classList.add("hide");
+    document.getElementById("about-PUBG").classList.add("hide");
 }
 
 if (windowLoc == "YON") {
@@ -19,6 +21,8 @@ if (windowLoc == "YON") {
     document.getElementById("activateYON").style.display = "none";
     document.querySelector(".hide-on-yes").style.display = "none";
     document.title = "Yes or No | Random";
+    document.getElementById("about-dice").classList.add("hide");
+    document.getElementById("about-PUBG").classList.add("hide");
 }
 
 if (windowLoc == "decider") {
@@ -27,6 +31,8 @@ if (windowLoc == "decider") {
     document.querySelector(".hide-on-yes").style.display = "none";
     document.getElementById("activateYON").style.display = "none";
     document.title = "Decider | Random";
+    document.getElementById("about-dice").classList.add("hide");
+    document.getElementById("about-PUBG").classList.add("hide");
 }
 
 

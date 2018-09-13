@@ -11,7 +11,7 @@ html, body {
     color: #ffa500;
 }
 
-#decider {
+#decider, .hide {
     display: none;
 }
 
