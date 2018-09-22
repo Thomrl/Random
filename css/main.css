@@ -15,6 +15,7 @@ html, body {
     display: none;
 }
 
+#deciderItem { display: none;}
 
 .unselectable {
     -webkit-touch-callout: none;
@@ -53,6 +54,25 @@ h2 a:hover {
     right: 0;
     margin: 100px auto 0 auto;
     vertical-align: baseline;
+}
+
+#settings {
+    display: none;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    top:0;
+    left: 0;
+    right: 0;
+    margin: 100px auto 0 auto;
+    vertical-align: baseline;
+}
+
+#settings-open {
+    display: none;
 }
 /*
 #close-window {
@@ -170,7 +190,10 @@ h2 a:hover {
     font-size: 2rem;
 }
 
-.info-links a {margin: 0 5px 0 0;}
+.info-links a, .info-links li {
+    margin: 0 5px 0 0; 
+    display: inline-block;
+}
 
 .closeWindow {border: solid black 1px;}
 

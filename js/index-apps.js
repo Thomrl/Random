@@ -33,6 +33,7 @@ if (windowLoc == "decider") {
     document.title = "Decider | Random";
     document.getElementById("about-dice").classList.add("hide");
     document.getElementById("about-PUBG").classList.add("hide");
+    document.getElementById("deciderItem").style.display = "block";
 }
 
 
@@ -96,11 +97,20 @@ function validate(e) {
 DOMaboutOpen = document.getElementById("about-open");
 DOMcloseWindow = document.getElementById("close-window");
 DOMcloseWindowButton = document.getElementById("close-window-button");
+DOMcloseWindow2 = document.getElementById("close-window2");
+DOMcloseWindowButton2 = document.getElementById("close-window-button2");
 DOMabout = document.getElementById("about");
+//Settings
+DOMsettings = document.getElementById("settings");
+DOMsettings = document.getElementById("settings");
 
 
 DOMaboutOpen.addEventListener("click", function() {
     DOMabout.style.display = "block";
+})
+
+document.getElementById("deciderItem").addEventListener("click", function() {
+    DOMsettings.style.display = "block";
 })
 
 DOMcloseWindow.addEventListener("click", function() {
@@ -109,6 +119,15 @@ DOMcloseWindow.addEventListener("click", function() {
 
 DOMcloseWindowButton.addEventListener("click", function() {
     DOMabout.style.display = "none";
+})
+
+//Settings
+DOMcloseWindow2.addEventListener("click", function() {
+    DOMsettings.style.display = "none";
+})
+
+DOMcloseWindowButton2.addEventListener("click", function() {
+    DOMsettings.style.display = "none";
 })
 
 
