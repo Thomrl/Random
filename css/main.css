@@ -17,6 +17,8 @@ html, body {
 
 #deciderItem { display: none;}
 
+.presets .dongs {border-color:white; border-style: none; border-left-style: solid; border-right-style: solid;}
+
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

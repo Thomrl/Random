@@ -1,3 +1,16 @@
+September 23, 2018
+  * Added presets to decider page (It can be found in the settings).
+  * Added a couple of presets.
+
+
+September 22, 2018
+  * Added settings section.
+
+
+September 13, 2018
+  * Changed when different things in the about section appears.
+
+
 September 5, 2018
   * Cleaning and trying a new way to upload changes (commit).
 

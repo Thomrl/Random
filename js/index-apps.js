@@ -5,8 +5,8 @@ console.log(windowLoc);
 if (windowLoc == "RNG") {
     document.getElementById("menu").style.display = "none";
     document.getElementById("decider").style.display = "block";
-    document.querySelector(".hide-on-yes").style.display = "none";
-    document.getElementById("activateYON").style.display = "none";
+    document.querySelector(".presets").style.display = "none";
+    //document.getElementById("activateYON").style.display = "none";
     document.getElementById("uInput").style.display = "none";
     document.querySelector(".rngElement").style.display = "block";
     document.title = "RNG | Random";
@@ -18,8 +18,8 @@ if (windowLoc == "YON") {
     document.getElementById("menu").style.display = "none";
     document.getElementById("decider").style.display = "block";
     document.getElementById("uInput").style.display = "none";
-    document.getElementById("activateYON").style.display = "none";
-    document.querySelector(".hide-on-yes").style.display = "none";
+    //document.getElementById("activateYON").style.display = "none";
+    document.querySelector(".presets").style.display = "none";
     document.title = "Yes or No | Random";
     document.getElementById("about-dice").classList.add("hide");
     document.getElementById("about-PUBG").classList.add("hide");
@@ -28,8 +28,8 @@ if (windowLoc == "YON") {
 if (windowLoc == "decider") {
     document.getElementById("menu").style.display = "none";
     document.getElementById("decider").style.display = "block";
-    document.querySelector(".hide-on-yes").style.display = "none";
-    document.getElementById("activateYON").style.display = "none";
+    document.querySelector(".presets").style.display = "none";
+    //document.getElementById("activateYON").style.display = "none";
     document.title = "Decider | Random";
     document.getElementById("about-dice").classList.add("hide");
     document.getElementById("about-PUBG").classList.add("hide");
@@ -75,8 +75,37 @@ function getTheResult() {
             resultOutput.style.color = "red";
             resultOutput.style.fontSize = "3rem";
         };
+        //resultOutput
     };
 };
+
+//presets
+var presetsActive = 0;
+document.getElementById("activate-presets").addEventListener("click", function() {
+    if (presetsActive == 0) {
+        document.querySelector(".presets").style.display = "block";
+        presetsActive = 1;
+    } else if (presetsActive == 1) {
+        document.querySelector(".presets").style.display = "none";
+        presetsActive = 0;
+    }
+})
+
+document.getElementById("pre-YON").addEventListener("click", function() {
+    document.getElementById("uInput").value = "Yes, No";
+})
+
+document.getElementById("pre-entertainment").addEventListener("click", function() {
+    document.getElementById("uInput").value = "TV Show, Movie, Game";
+})
+
+var imdbSearchActive = 0;
+document.getElementById("pre-tvshows").addEventListener("click", function() {
+    document.getElementById("uInput").value = "Maniac, 12 Monkeys, Outlander, Altered Carbon, The Walking Dead, Fear The Walking Dead, Disenchanment, Rectify, Wynonna Earp, KillJoys, From Duck Till Dawn, The Originals, Lucifer, Scorpion, Bates Motel";
+    imdbSearchActive = 1;
+})
+
+
 
 
 //Enter
@@ -107,10 +136,12 @@ DOMsettings = document.getElementById("settings");
 
 DOMaboutOpen.addEventListener("click", function() {
     DOMabout.style.display = "block";
+    DOMsettings.style.display = "none";
 })
 
 document.getElementById("deciderItem").addEventListener("click", function() {
     DOMsettings.style.display = "block";
+    DOMabout.style.display = "none";
 })
 
 DOMcloseWindow.addEventListener("click", function() {
