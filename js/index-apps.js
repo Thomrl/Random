@@ -101,7 +101,7 @@ document.getElementById("pre-entertainment").addEventListener("click", function(
 
 var imdbSearchActive = 0;
 document.getElementById("pre-tvshows").addEventListener("click", function() {
-    document.getElementById("uInput").value = "Maniac, 12 Monkeys, Outlander, Altered Carbon, The Walking Dead, Fear The Walking Dead, Disenchanment, Rectify, Wynonna Earp, KillJoys, From Duck Till Dawn, The Originals, Lucifer, Scorpion, Bates Motel";
+    document.getElementById("uInput").value = "Maniac, 12 Monkeys, Outlander, Altered Carbon, The Walking Dead, Fear The Walking Dead, Disenchantment, Rectify, Wynonna Earp, KillJoys, From Dusk Till Dawn, The Originals, Lucifer, Scorpion, Bates Motel";
     imdbSearchActive = 1;
 })
 
