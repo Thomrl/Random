@@ -6,10 +6,10 @@ var operators = ['Maestro', 'Alibi', 'Lion', 'Finka', 'Vigil', 'Dokkaebi', 'Zofi
     'Bandit', 'Blitz', 'IQ', 'Fuze', 'Glaz', 'Tachanka', 'Kapkan'];
 
 var attackers = ['Lion', 'Finka', 'Dokkaebi', 'Zofia', 'Ying', 'Jackal', 'Hibana', 'Capitão',
- 'Blackbeard', 'Buck', 'Sledge', 'Thatcher', 'Ash', 'Thermite', 'Montagne', 'Twitch', 'Blitz', 'IQ', 'Fuze', 'Glaz', 'Maverick'];
+ 'Blackbeard', 'Buck', 'Sledge', 'Thatcher', 'Ash', 'Thermite', 'Montagne', 'Twitch', 'Blitz', 'IQ', 'Fuze', 'Glaz', 'Maverick', 'Nomad'];
 
 var defenders = ['Maestro', 'Alibi', 'Vigil', 'Ela', 'Lesion', 'Mira', 'Echo', 'Caveira', 'Valkyrie',
- 'Frost', 'Mute', 'Smoke', 'Castle', 'Pulse', 'Doc', 'Rook', 'Jäger', 'Bandit', 'Tachanka', 'Kapkan', 'Clash'];
+ 'Frost', 'Mute', 'Smoke', 'Castle', 'Pulse', 'Doc', 'Rook', 'Jäger', 'Bandit', 'Tachanka', 'Kapkan', 'Clash', 'Kaid'];
 
 //DOM
 DOMattacker = document.querySelector("#attacker");
@@ -68,7 +68,7 @@ var secondaryCap = 2;
 
 var wepCat = [['Finka', 'Lion', 'IQ', 'Fuze', 'Twitch', 'Doc', 'Rook', 'Thatcher', 'Jackal'], // 3 Primary Weapons
 ['Blitz', 'Montagne', 'Glaz', 'Clash'], // 1 Primary Weapon
-['Ying', 'Zofia', 'Blitz', 'Mute', 'Lesion', 'Ela', 'Thatcher', 'IQ', 'Jäger', 'Bandit', 'Buck', 'Frost', 'Blackbeard', 'Valkyrie', 'Capitão', 'Caveira', 'Maverick']]; // 1 Secondary Weapon
+['Ying', 'Zofia', 'Blitz', 'Mute', 'Lesion', 'Ela', 'Thatcher', 'IQ', 'Jäger', 'Bandit', 'Buck', 'Frost', 'Blackbeard', 'Valkyrie', 'Capitão', 'Caveira', 'Maverick', 'Nomad', 'kaid']]; // 1 Secondary Weapon
 
 var foundHere = "nowhere";
 var boop = 0;
@@ -172,7 +172,7 @@ document.getElementById("r6s-toggle-loadout").addEventListener("click", function
 })
 
 //test operators
-/*
+
 var testOpStatus = 0;
 
 DOMtestToggle = document.getElementById("test-toggle");
@@ -191,8 +191,8 @@ document.getElementById("test-toggle").addEventListener("click", function() {
     } else {
         DOMtestToggle.style.backgroundColor = "rgb(5, 138, 5";
         DOMtestToggle.innerHTML = '<i class="fas fa-plus-circle"></i> ON ';
-        attackers.push("Maverick");
-        defenders.push("Clash");
+        attackers.push("Nomad");
+        defenders.push("Kaid");
         testOpStatus = 0;
     };
 });
@@ -204,7 +204,7 @@ document.getElementById("test-toggle").addEventListener("mouseenter", function()
 document.getElementById("test-toggle").addEventListener("mouseleave", function() {
     DOMtestToggle.style.opacity = "1";
 })
-*/
+
 
 //About
 DOMaboutOpen = document.getElementById("about-open");
