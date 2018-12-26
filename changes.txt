@@ -1,3 +1,12 @@
+December 26, 2018
+  * on/off option for test operators disabled. (operators are now live).
+
+
+November 23, 2018
+  * Nomad and Kaid (test operators) added to Random R6S operator page.
+  * on/off option for test operators enabled again.
+
+
 September 23, 2018
   * Added presets to decider page (It can be found in the settings).
   * Added a couple of presets.
@@ -18,7 +27,7 @@ September 5, 2018
 September 4, 2018
   * When clicking back from Decider and Yes or No, you go back to the frontpage again.
   * RNG has been moved to frontpage.
-  * On/off for test operators has been removed from the Random R6S operator page, now that the there's no longer test operators.
+  * On/off for test operators has been removed from the Random R6S operator page, now that there's no longer test operators.
 
 
 August 31, 2018
