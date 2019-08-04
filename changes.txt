@@ -1,3 +1,9 @@
+August 4, 2019
+  * A lot of javascript rewritten for R6 Siege page (No visible changes for the user).
+  * small changes in css to adapt to the javascript rewrite.
+  * IMDB search for decider has been removed.
+
+
 December 26, 2018
   * on/off option for test operators disabled. (operators are now live).
 

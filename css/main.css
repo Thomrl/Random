@@ -11,13 +11,13 @@ html, body {
     color: #ffa500;
 }
 
-#decider, .hide, #imdb-active-indicator {
+#decider, .hide {
     display: none;
 }
 
 #deciderItem { display: none;}
 
-.presets .dongs {border-color:white; border-style: none; border-left-style: solid; border-right-style: solid;}
+.presets .dongs {border-color:white; border-style: block; margin-right: 10px;}
 
 .unselectable {
     -webkit-touch-callout: none;
@@ -381,7 +381,6 @@ Rainbow Six Siege
     margin: 5px;
 }
 
-#primaryWeapon3 { display: none;}
 
 .loadoutActive { background-color: white; }
 

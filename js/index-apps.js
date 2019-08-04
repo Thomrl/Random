@@ -1,4 +1,3 @@
-
 windowLoc = window.location.href.split("?")[1];
 console.log(windowLoc);
 
@@ -37,13 +36,21 @@ if (windowLoc == "decider") {
 }
 
 
-//Decider, Yes or No & RNG
+
+/***************************************************************************
+
+Functionality of:  Decider, Yes or No & RNG
+
+****************************************************************************/
+
+
 var resultOutput = document.getElementById("resultHere");
 var resultButton = document.getElementById("getResult");
 resultButton.addEventListener("click", getTheResult);
 
 function getTheResult() {
     if (windowLoc == "RNG") {
+        // Random Number Generator. Generate number from user input 1 to user input 2.
         var userInput1 = parseInt(document.getElementById("uInput1").value);
         var userInput2 = parseInt(document.getElementById("uInput2").value);
         var numbers = [];
@@ -57,30 +64,18 @@ function getTheResult() {
         resultOutput.style.fontSize = "2.5rem";
     } else {
         if (windowLoc == "YON") {
+            // Yes Or No. Pick between yer or no, change color and so on.
             document.getElementById("uInput").textContent = "Yes, No";
         }
         var userInput = document.getElementById("uInput").value.toString();
         var splitData = userInput.split(",");
         var findRandom = splitData[Math.floor(Math.random() * splitData.length)];
         
-        if (imdbSearchActive == 1 && findRandom.startsWith(" ") == true) {
-            console.log(findRandom)
-            var findRandom = findRandom.slice(1);//removes the space at the begining if there is any.
-            searchWords = findRandom.replace(/\s+/g, '-');//replaces spaces in the middle of strings if there is any.
-        } else {
-            resultOutput.textContent = findRandom;
-            searchWords = findRandom;
-        }
+
         console.log(findRandom);
         resultOutput.style.color = "white";
         resultOutput.style.fontSize = "2.5rem";
 
-        if (imdbSearchActive == 1) {
-            //var url = "https://www.imdb.com/find?";
-            var search = "https://www.imdb.com/find?" + searchWords;
-            console.log(search);
-            resultOutput.innerHTML = "<a href="+search+" id=\"resultHere\" target=\"_blank\">"+findRandom+"</a>";
-        }
     
         if (findRandom == "Yes") {
             resultOutput.style.color = "#00E500";
@@ -90,6 +85,8 @@ function getTheResult() {
             resultOutput.style.fontSize = "3rem";
         };
         //resultOutput
+        
+        resultOutput.textContent = findRandom;
     };
 };
 
@@ -107,35 +104,14 @@ document.getElementById("activate-presets").addEventListener("click", function()
 
 document.getElementById("pre-YON").addEventListener("click", function() {
     document.getElementById("uInput").value = "Yes, No";
-    document.getElementById("imdb-active-indicator").style.display = "none";
-    imdbSearchActive = 0;
 })
 
 document.getElementById("pre-entertainment").addEventListener("click", function() {
-    document.getElementById("uInput").value = "TV Show, Movie, Game, YouTube";
-    document.getElementById("imdb-active-indicator").style.display = "none";
-    imdbSearchActive = 0;
+    document.getElementById("uInput").value = "Read, TV Show, Movie, Game, YouTube";
 })
 
-var imdbSearchActive = 0;
 document.getElementById("pre-tvshows").addEventListener("click", function() {
-    document.getElementById("uInput").value = "Maniac, 12 Monkeys, Outlander, Altered Carbon, The Walking Dead, Fear The Walking Dead, Disenchantment, Rectify, Wynonna Earp, KillJoys, From Dusk Till Dawn, The Originals, Lucifer, Scorpion, Bates Motel";
-    imdbSearchActive = 1;
-    document.getElementById("imdb-active-indicator").style.display = "block";
-})
-
-document.getElementById("imdb-active-indicator").addEventListener("click", function(){
-    document.getElementById("imdb-active-indicator").style.display = "none";
-    imdbSearchActive = 0;
-})
-
-document.getElementById("imdb-active-indicator").addEventListener("mouseover", function(){
-    document.getElementById("imdb-active-indicator").style.cursor = "pointer";
-    document.getElementById("imdb-active-indicator").style.color = "#e29612";
-})
-
-document.getElementById("imdb-active-indicator").addEventListener("mouseleave", function(){
-    document.getElementById("imdb-active-indicator").style.color = "#ffa500";
+    document.getElementById("uInput").value = "12 Monkeys, Outlander, Altered Carbon, Fear The Walking Dead, Disenchantment, Wynonna Earp, KillJoys, From Dusk Till Dawn, The Originals, Lucifer, Scorpion, Bates Motel";
 })
 
 
