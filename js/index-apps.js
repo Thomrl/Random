@@ -111,7 +111,11 @@ document.getElementById("pre-entertainment").addEventListener("click", function(
 })
 
 document.getElementById("pre-tvshows").addEventListener("click", function() {
-    document.getElementById("uInput").value = "12 Monkeys, Outlander, Altered Carbon, Fear The Walking Dead, Disenchantment, Wynonna Earp, KillJoys, From Dusk Till Dawn, The Originals, Lucifer, Scorpion, Bates Motel";
+    document.getElementById("uInput").value = "12 Monkeys, Outlander, Fear The Walking Dead, From Dusk Till Dawn, The 100, Orange Is The New Black, Sabrina";
+})
+
+document.getElementById("pre-watchlist").addEventListener("click", function() {
+    document.getElementById("uInput").value = "Altered Carbon, Disenchantment, Wynonna Earp, KillJoys, The Originals, Lucifer, Scorpion, Bates Motel";
 })
 
 

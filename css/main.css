@@ -2,14 +2,23 @@
        GENERAL
 ********************/
 
+.presets {
+    display: inline-block;
+}
+
+
 html, body {
     border: 0;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #333333;
     color: #ffa500;
 }
+
+#grey-body {background-color: #333333;}
+
+#R6S-body {background-image: url('https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-siege-v3-bg.jpg');    }
+
 
 #decider, .hide {
     display: none;
@@ -17,7 +26,7 @@ html, body {
 
 #deciderItem { display: none;}
 
-.presets .dongs {border-color:white; border-style: block; margin-right: 10px;}
+.presets .dongs {border-color:white; border-style: block; margin-right: 10px; margin-bottom: 5px;}
 
 .unselectable {
     -webkit-touch-callout: none;
@@ -54,7 +63,7 @@ h2 a:hover {
     top:0;
     left: 0;
     right: 0;
-    margin: 100px auto 0 auto;
+    margin: 10px auto 0 auto;
     vertical-align: baseline;
 }
 
@@ -199,7 +208,7 @@ h2 a:hover {
 
 .closeWindow {border: solid black 1px;}
 
-#about-open {cursor: pointer;}
+#about-open {cursor: pointer; margin-bottom: 20px;}
 
 #about p {font-size: 1.2rem;}
 
@@ -315,7 +324,7 @@ Rainbow Six Siege
 
 .operatorBox {max-width: 350px;}
 
-.op-img { border: 1px rgb(99, 99, 99) solid}
+.op-img { border: 1px rgb(99, 99, 99) solid; width: 352px;}
 /*
 .op-img img {
     height: 350px;
@@ -323,7 +332,7 @@ Rainbow Six Siege
 }
 */
 .op-badge {
-    margin-top: -620px;
+    margin-top: -1075px;
     margin-left: 250px;
 }
 
@@ -332,13 +341,27 @@ Rainbow Six Siege
     color: white;
     position: relative;
     margin: auto;
-    margin-top: -70px;
+    margin-top: -90px;
+    margin-bottom: 15px;
     text-align: center;
     text-shadow: -2px 2px black, 0 1px black, 1px 0 black, 0 -1px black;
+
     /*background-color: rgba(0, 0, 0, 0.685);*/
 }
 
-#button { margin-top: 20px; }
+#op-bottom-frame {
+    position: absolute;
+    margin-top: -39px;
+}
+
+#op-bottom-frame .dongs {
+    padding: 17px;
+    text-shadow: -2px 2px black, 0 1px black, 1px 0 black, 0 -1px black;
+    border: 0px solid #36a9e0;
+}
+
+/*
+#button { margin-top: 20px; }*/
 
 .R6S { color: #36a9e0; }
 

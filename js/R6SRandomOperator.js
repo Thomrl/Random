@@ -1,3 +1,6 @@
+//document.body.style.backgroundImage = "url('https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-siege-v3-bg.jpg')";
+
+
 /************************************
  * 
  *      OPERATORS
@@ -25,13 +28,15 @@ var Attacker = {
     fuze: {name: 'Fuze', primaryWeapon: 3, secondaryWeapon: 2},
     glaz: {name: 'Glaz', primaryWeapon: 1, secondaryWeapon: 2},
     maverick: {name: 'Maverick', primaryWeapon: 2, secondaryWeapon: 1},
-    nomad: {name: 'Nomad', primaryWeapon: 2, secondaryWeapon: 1}
+    nomad: {name: 'Nomad', primaryWeapon: 2, secondaryWeapon: 1},
+    gridlock: {name: 'Gridlock', primaryWeapon: 2, secondaryWeapon: 2},
+    nøkk: {name: 'Nøkk', primaryWeapon: 2, secondaryWeapon: 2}
 }
 
 var Defender = {
     maestro: {name: 'Maestro', primaryWeapon: 2, secondaryWeapon: 2},
     alibi: {name: 'Alibi', primaryWeapon: 2, secondaryWeapon: 2},
-    vigil: {name: 'Vigil', primaryWeapon: 2, secondaryWeapon: 2},
+    /*vigil: {name: 'Vigil', primaryWeapon: 2, secondaryWeapon: 2},
     Ela: {name: 'Ela', primaryWeapon: 2, secondaryWeapon: 1},
     Lesion: {name: 'Lesion', primaryWeapon: 2, secondaryWeapon: 1},
     Mira: {name: 'Mira', primaryWeapon: 2, secondaryWeapon: 2},
@@ -49,8 +54,10 @@ var Defender = {
     Bandit: {name: 'Bandit', primaryWeapon: 2, secondaryWeapon: 1},
     Tachanka: {name: 'Tachanka', primaryWeapon: 2, secondaryWeapon: 2},
     Kapkan: {name: 'Kapkan', primaryWeapon: 2, secondaryWeapon: 2},
-    Clash: {name: 'Clash', primaryWeapon: 1, secondaryWeapon: 2},
+    Clash: {name: 'Clash', primaryWeapon: 1, secondaryWeapon: 2},*/
     Kaid: {name: 'Kaid', primaryWeapon: 2, secondaryWeapon: 1},
+    Mozzie: {name: 'Mozzie', primaryWeapon: 2, secondaryWeapon: 2},
+    Warden: {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2}
 }
 
 
@@ -61,6 +68,8 @@ DOMimg = document.querySelector(".op-img");
 DOMbadge = document.querySelector(".op-badge");
 DOMname = document.querySelector(".op-name");
 
+
+DOMimg.style.width = "352px";
 
 //Action!
 DOMattacker.addEventListener('click', randomAttacker);
