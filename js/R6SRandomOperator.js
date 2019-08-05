@@ -36,7 +36,7 @@ var Attacker = {
 var Defender = {
     maestro: {name: 'Maestro', primaryWeapon: 2, secondaryWeapon: 2},
     alibi: {name: 'Alibi', primaryWeapon: 2, secondaryWeapon: 2},
-    /*vigil: {name: 'Vigil', primaryWeapon: 2, secondaryWeapon: 2},
+    vigil: {name: 'Vigil', primaryWeapon: 2, secondaryWeapon: 2},
     Ela: {name: 'Ela', primaryWeapon: 2, secondaryWeapon: 1},
     Lesion: {name: 'Lesion', primaryWeapon: 2, secondaryWeapon: 1},
     Mira: {name: 'Mira', primaryWeapon: 2, secondaryWeapon: 2},
@@ -54,7 +54,7 @@ var Defender = {
     Bandit: {name: 'Bandit', primaryWeapon: 2, secondaryWeapon: 1},
     Tachanka: {name: 'Tachanka', primaryWeapon: 2, secondaryWeapon: 2},
     Kapkan: {name: 'Kapkan', primaryWeapon: 2, secondaryWeapon: 2},
-    Clash: {name: 'Clash', primaryWeapon: 1, secondaryWeapon: 2},*/
+    Clash: {name: 'Clash', primaryWeapon: 1, secondaryWeapon: 2},
     Kaid: {name: 'Kaid', primaryWeapon: 2, secondaryWeapon: 1},
     Mozzie: {name: 'Mozzie', primaryWeapon: 2, secondaryWeapon: 2},
     Warden: {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2}
