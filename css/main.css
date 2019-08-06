@@ -6,6 +6,12 @@
     display: inline-block;
 }
 
+#control-preset {margin-bottom: 20px; color:black;}
+#save-preset {color: rgb(0, 92, 28)}
+#delete-preset {color: red}
+
+
+
 
 html, body {
     border: 0;

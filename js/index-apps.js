@@ -28,6 +28,7 @@ if (windowLoc == "decider") {
     document.getElementById("menu").style.display = "none";
     document.getElementById("decider").style.display = "block";
     document.querySelector(".presets").style.display = "none"; //PRESETS
+    fetchLocalPresets()
     //document.getElementById("activateYON").style.display = "none";
     document.title = "Decider | Random";
     document.getElementById("about-dice").classList.add("hide");
@@ -101,7 +102,7 @@ document.getElementById("activate-presets").addEventListener("click", function()
         presetsActive = 0;
     }
 })
-
+/*
 document.getElementById("pre-YON").addEventListener("click", function() {
     document.getElementById("uInput").value = "Yes, No";
 })
@@ -117,7 +118,83 @@ document.getElementById("pre-tvshows").addEventListener("click", function() {
 document.getElementById("pre-watchlist").addEventListener("click", function() {
     document.getElementById("uInput").value = "Altered Carbon, Disenchantment, Wynonna Earp, KillJoys, The Originals, Lucifer, Scorpion, Bates Motel";
 })
+*/
 
+
+/*
+for(i=0; i < localStorage.length; i++) {
+    var currentKey = localStorage.key(i)
+    var currentValue = localStorage.getItem(currentKey)
+    document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+currentKey+'" class="dongs unselectable presets">'+currentKey+'</a>');
+    document.getElementById("pre-"+currentKey+"").addEventListener("click", function() {
+        document.getElementById("uInput").value = currentValue;
+    });
+    
+    console.log(currentKey+" - "+currentValue);
+}
+
+*/
+
+//<a id="pre-watchlist" class="dongs unselectable presets">TV Watchlist</a>
+
+//save preset
+document.getElementById("save-preset").addEventListener("click", function() {
+    let nameOfPreset = document.getElementById("name-preset").value
+    let valueOfPreset = document.getElementById("uInput").value
+    console.log(nameOfPreset)
+
+    if (localStorage.hasOwnProperty(nameOfPreset) == true) {
+        console.log("Already exists");
+        document.getElementById("pre-"+nameOfPreset).remove();
+
+    } else {
+        console.log("Unique Name")
+    }
+
+
+
+    localStorage.setItem(document.getElementById("name-preset").value, document.getElementById("uInput").value);
+
+
+
+
+
+    
+    document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+nameOfPreset+'" class="dongs unselectable presets jspresets">'+nameOfPreset+'</a>'); 
+    document.getElementById("pre-"+nameOfPreset).addEventListener("click", function() { 
+        document.getElementById("uInput").value = valueOfPreset;
+    });
+    
+
+})
+
+
+//fetch presets
+function fetchLocalPresets() {
+    for(i=0; i < localStorage.length; i++) {
+        let currentKey = localStorage.key(i) //let <3
+        let currentValue = localStorage.getItem(currentKey) //let <3
+        document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+currentKey+'" class="dongs unselectable presets jspresets">'+currentKey+'</a>'); 
+        document.getElementById("pre-"+currentKey).addEventListener("click", function() { 
+            document.getElementById("uInput").value = currentValue;
+            document.getElementById("name-preset").value = currentKey;
+        });
+        console.log(currentKey+" - "+currentValue); 
+    }
+}
+
+/*
+function findValue(ck) {
+    foundValue = localStorage.getItem(ck);
+    document.getElementById("uInput").value = foundValue;
+}*/
+
+//delete preset
+document.getElementById("delete-preset").addEventListener("click", function() {
+    var keyToDelete = document.getElementById("name-preset").value
+    localStorage.removeItem(keyToDelete);
+    document.getElementById("pre-"+keyToDelete).remove();
+})
 
 
 
