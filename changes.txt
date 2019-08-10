@@ -1,3 +1,13 @@
+August 10, 2019
+  * Decider
+    * Presets are now easier to find, but I still call it beta/early stuff.
+    * Settings page is now hidden (presets was the only thing to find there).
+  * R6 Siege
+    * Dried up WET code.
+    * Test operators section has been adjusted to work with the new code (Ready for next time there's test operators).
+  * Cleaning and adjustments in css, javascript and different pages.
+
+
 August 6, 2019
   * Presets! Users can now save and delete their own presets on the decider page. (Still in early stuff)
 
@@ -8,12 +18,12 @@ August 5, 2019
 
 August 4, 2019
   * A lot of javascript rewritten for R6 Siege page (No visible changes for the user).
-  * small changes in css to adapt to the javascript rewrite.
+  * Small changes in css to adapt to the javascript rewrite.
   * IMDB search for decider has been removed.
 
 
 December 26, 2018
-  * on/off option for test operators disabled. (operators are now live).
+  * On/off option for test operators disabled. (operators are now live).
 
 
 November 23, 2018

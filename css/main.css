@@ -2,17 +2,6 @@
        GENERAL
 ********************/
 
-.presets {
-    display: inline-block;
-}
-
-#control-preset {margin-bottom: 20px; color:black;}
-#save-preset {color: rgb(0, 92, 28)}
-#delete-preset {color: red}
-
-
-
-
 html, body {
     border: 0;
     padding: 0;
@@ -22,17 +11,18 @@ html, body {
 }
 
 #grey-body {background-color: #333333;}
-
 #R6S-body {background-image: url('https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-siege-v3-bg.jpg');    }
 
 
-#decider, .hide {
-    display: none;
-}
+#control-preset {margin-bottom: 20px; color:black;}
+#save-preset {color: rgb(0, 92, 28)}
+#delete-preset {color: red}
 
-#deciderItem { display: none;}
+#menu, #decider, .hide, #uInput, #deciderItem, .rngElement {display: none;}
+.presets {display: inline-block;}
+#activate-presets {display: none; float:right;}
 
-.presets .dongs {border-color:white; border-style: block; margin-right: 10px; margin-bottom: 5px;}
+.presets .btns2 {border-color:white; border-style: block; margin-right: 10px; margin-bottom: 5px;}
 
 .unselectable {
     -webkit-touch-callout: none;
@@ -43,16 +33,9 @@ html, body {
     user-select: none;
 }
 
-a h2 {color: #ffa500;}
-h2 a {color: #ffa500;}
+a h2, h2 a {color: #ffa500;}
 
-a h2:hover {
-    color: #ffa500;
-    text-decoration: underline;
-    text-decoration-color: #ffa500;
-}
-
-h2 a:hover {
+a h2:hover, h2 a:hover {
     color: #ffa500;
     text-decoration: underline;
     text-decoration-color: #ffa500;
@@ -108,12 +91,6 @@ h2 a:hover {
     background-color: rgba(255, 0, 0, 0.329);
 }
 
-.rngElement {
-    display: none;
-}
-
-
-
 .uInput {
     vertical-align: top;
     height: 70px;
@@ -126,11 +103,6 @@ h2 a:hover {
     border-radius: 5px;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-.uInput:focus {
-    border-color: #ffffff;
-    outline: none !important;
 }
 
 .inputs {
@@ -150,13 +122,9 @@ h2 a:hover {
     border-right: 0;
 }
 
-.inputs:focus {
+.uInput:focus, .inputs:focus {
     border-color: #ffffff;
     outline: none !important;
-}
-
-.boxboxplease {
-	display: block;
 }
 
 .btns {
@@ -170,41 +138,30 @@ h2 a:hover {
     width: 100%;
     font-size: 2rem;
 }
-
-.btns4 {
-    margin-bottom: 5px;
-    height: 50px;
-    border-color: #ffa500;
-    background-color: #ffa500;
-    color: Black;
-    box-shadow: 0;
-    border-radius: 5px;
-    width: 98%;
-    font-size: 2rem;
-}
-
+/*
 .btns2 {
     margin-bottom: 5px;
     height: 50px;
     border-color: #ffffff;
-    background-color: #ffffff;
     color: Black;
     box-shadow: 0;
     border-radius: 5px;
     width: 100%;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    border: 1px solid #333333;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    list-style-type: none;
 }
-
-.btns3 {
-    margin-bottom: 5px;
-    height: 50px;
-    border-color: #e31f1f;
-    background-color: #e31f1f;
-    color: Black;
-    box-shadow: 0;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 2rem;
+*/
+.btns2 {
+    font-size: 2.5rem;
+    border: 1px solid #333333;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    list-style-type: none;
 }
 
 .info-links a, .info-links li {
@@ -360,7 +317,7 @@ Rainbow Six Siege
     margin-top: -39px;
 }
 
-#op-bottom-frame .dongs {
+#op-bottom-frame .btns2 {
     padding: 17px;
     text-shadow: -2px 2px black, 0 1px black, 1px 0 black, 0 -1px black;
     border: 0px solid #36a9e0;
@@ -371,16 +328,7 @@ Rainbow Six Siege
 
 .R6S { color: #36a9e0; }
 
-.dongs {
-    font-size: 2.5rem;
-    border: 1px solid #333333;
-    color: white;
-    border-radius: 2px;
-    padding: 5px;
-    list-style-type: none;
-}
-
-.dongs:hover {
+.btns2:hover {
     border: 1px solid #36a9e0;
     color: #36a9e0;
     border-radius: 2px;
@@ -389,11 +337,10 @@ Rainbow Six Siege
     text-decoration: none;
 }
 
-.dongsActive {
+.btns2Active {
     border: 1px solid #ffa500;
     color: #36a9e0;
     border: 1px solid #36a9e0;
-
 }
 
 .loadoutCat, .loadoutCat > li {
@@ -444,7 +391,6 @@ Rainbow Six Siege
 ****************/
 
 .yes {color: #00E500; font-size: 3rem;}
-
 .no {color: red; font-size: 3rem;}
 
 /***************
@@ -453,13 +399,10 @@ Rainbow Six Siege
 
 
 .themes p {display: inline-block;}
-
 .themes p:hover {cursor: pointer;}
 
 #color1 {color: orange}
 #color2 {color: #EB4D4D}
-
-
 
 .dice {max-width: 300px;}
 
@@ -495,10 +438,5 @@ Rainbow Six Siege
 
 .noTextDecoration:hover {text-decoration: none;}
 
-.floatLeft {
-    float:left;
-}
-
-.floatRight {
-    float:right;
-}
+.floatLeft {float:left;}
+.floatRight {float:right;}

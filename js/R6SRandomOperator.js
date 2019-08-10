@@ -37,27 +37,27 @@ var Defender = {
     maestro: {name: 'Maestro', primaryWeapon: 2, secondaryWeapon: 2},
     alibi: {name: 'Alibi', primaryWeapon: 2, secondaryWeapon: 2},
     vigil: {name: 'Vigil', primaryWeapon: 2, secondaryWeapon: 2},
-    Ela: {name: 'Ela', primaryWeapon: 2, secondaryWeapon: 1},
-    Lesion: {name: 'Lesion', primaryWeapon: 2, secondaryWeapon: 1},
-    Mira: {name: 'Mira', primaryWeapon: 2, secondaryWeapon: 2},
-    Echo: {name: 'Echo', primaryWeapon: 2, secondaryWeapon: 2},
-    Caveira: {name: 'Caveira', primaryWeapon: 2, secondaryWeapon: 1},
-    Valkyrie: {name: 'Valkyrie', primaryWeapon: 2, secondaryWeapon: 1},
-    Frost: {name: 'Frost', primaryWeapon: 2, secondaryWeapon: 1},
-    Mute: {name: 'Mute', primaryWeapon: 2, secondaryWeapon: 1},
-    Smoke: {name: 'Smoke', primaryWeapon: 2, secondaryWeapon: 2},
-    Castle: {name: 'Castle', primaryWeapon: 3, secondaryWeapon: 2},
-    Pulse: {name: 'Pulse', primaryWeapon: 3, secondaryWeapon: 2},
-    Doc: {name: 'Doc', primaryWeapon: 3, secondaryWeapon: 2},
-    Rook: {name: 'Rook', primaryWeapon: 3, secondaryWeapon: 2},
-    Jäger: {name: 'Jäger', primaryWeapon: 2, secondaryWeapon: 1},
-    Bandit: {name: 'Bandit', primaryWeapon: 2, secondaryWeapon: 1},
-    Tachanka: {name: 'Tachanka', primaryWeapon: 2, secondaryWeapon: 2},
-    Kapkan: {name: 'Kapkan', primaryWeapon: 2, secondaryWeapon: 2},
-    Clash: {name: 'Clash', primaryWeapon: 1, secondaryWeapon: 2},
-    Kaid: {name: 'Kaid', primaryWeapon: 2, secondaryWeapon: 1},
-    Mozzie: {name: 'Mozzie', primaryWeapon: 2, secondaryWeapon: 2},
-    Warden: {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2}
+    ela: {name: 'Ela', primaryWeapon: 2, secondaryWeapon: 1},
+    lesion: {name: 'Lesion', primaryWeapon: 2, secondaryWeapon: 1},
+    mira: {name: 'Mira', primaryWeapon: 2, secondaryWeapon: 2},
+    echo: {name: 'Echo', primaryWeapon: 2, secondaryWeapon: 2},
+    caveira: {name: 'Caveira', primaryWeapon: 2, secondaryWeapon: 1},
+    valkyrie: {name: 'Valkyrie', primaryWeapon: 2, secondaryWeapon: 1},
+    frost: {name: 'Frost', primaryWeapon: 2, secondaryWeapon: 1},
+    mute: {name: 'Mute', primaryWeapon: 2, secondaryWeapon: 1},
+    smoke: {name: 'Smoke', primaryWeapon: 2, secondaryWeapon: 2},
+    castle: {name: 'Castle', primaryWeapon: 3, secondaryWeapon: 2},
+    pulse: {name: 'Pulse', primaryWeapon: 3, secondaryWeapon: 2},
+    doc: {name: 'Doc', primaryWeapon: 3, secondaryWeapon: 2},
+    rook: {name: 'Rook', primaryWeapon: 3, secondaryWeapon: 2},
+    jäger: {name: 'Jäger', primaryWeapon: 2, secondaryWeapon: 1},
+    bandit: {name: 'Bandit', primaryWeapon: 2, secondaryWeapon: 1},
+    tachanka: {name: 'Tachanka', primaryWeapon: 2, secondaryWeapon: 2},
+    kapkan: {name: 'Kapkan', primaryWeapon: 2, secondaryWeapon: 2},
+    clash: {name: 'Clash', primaryWeapon: 1, secondaryWeapon: 2},
+    kaid: {name: 'Kaid', primaryWeapon: 2, secondaryWeapon: 1},
+    mozzie: {name: 'Mozzie', primaryWeapon: 2, secondaryWeapon: 2},
+    warden: {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2}
 }
 
 
@@ -77,80 +77,56 @@ DOMdefender.addEventListener('click', randomDefender);
 
 function randomAttacker() {
     randomOperator(Object.values(Attacker), Object.values(Defender));
-    DOMattacker.classList.add('dongsActive');
-    DOMdefender.classList.remove('dongsActive');
+    DOMattacker.classList.add('btns2Active');
+    DOMdefender.classList.remove('btns2Active');
 }
 
 function randomDefender() {
     randomOperator(Object.values(Defender), Object.values(Attacker));
-    DOMdefender.classList.add('dongsActive');
-    DOMattacker.classList.remove('dongsActive');
+    DOMdefender.classList.add('btns2Active');
+    DOMattacker.classList.remove('btns2Active');
 }
 
+var prev1, prev2, prev3 = 0;
 function randomOperator(operator) {
     chosen = operator[Math.floor(Math.random() * operator.length)];
-    chosenName = chosen.name
+    chosenName = chosen.name;
     DOMimg.src = "img/R6S/"+chosenName+"1"+".png";
     DOMbadge.src = "img/R6S/"+chosenName+"2"+".png";
     DOMimg.style.width = "352px";
     DOMname.textContent = chosenName;
-    console.log(chosen)
-    primarywep = chosen.primaryWeapon
-    secondarywep = chosen.secondaryWeapon
-    loadout(primarywep, secondarywep);
+    console.log(chosen);
+    //primaryWep = chosen.primaryWeapon;
+    //secondaryWep = chosen.secondaryWeapon;
+    secondaryGad = 2;
+    prev1 = loadout(chosen.primaryWeapon, "primaryWeapon", prev1);
+    prev2 = loadout(chosen.secondaryWeapon, "secondaryWeapon", prev2);
+    prev3 = loadout(secondaryGad, "secondaryGadget", prev3);
 }
 
 
 //loadout
-var hasbeenrun = 0
-function loadout(wep1, wep2) {
+function loadout(weaponAmount, DOMid, previousAmount) {
 
     //Reset lines
-
-    if(hasbeenrun == 1) {
-        for (i=0; i < previousPrimaryWeaponAmount; i++) {
-            document.getElementById('primaryWeapon'+[i+1]+'').remove();
-        }
-        for (i=0; i < previousSecondaryWeaponAmount; i++) {
-            document.getElementById('secondaryWeapon'+[i+1]+'').remove();
-        }
-        for (i=0; i < 2; i++) {
-            document.getElementById('secondaryGadget'+[i+1]+'').remove();
+    if(previousAmount > 0) {
+        for (i=0; i < previousAmount; i++) {
+            document.getElementById(DOMid+[i+1]).remove();
         }
     }
 
     //Make needed weapon lines
-
-    for (i=0; i < wep1; i++) {
-        document.getElementById('primaryWeapon').insertAdjacentHTML('beforeend','<div id="primaryWeapon'+[i+1]+'" class="loadoutLines" ></div>');
+    for (i=0; i < weaponAmount; i++) {
+        document.getElementById(DOMid).insertAdjacentHTML('beforeend','<div id='+DOMid+[i+1]+' class="loadoutLines" ></div>');
     }
 
-    for (i=0; i < wep2; i++) {
-        document.getElementById('secondaryWeapon').insertAdjacentHTML('beforeend','<div id="secondaryWeapon'+[i+1]+'" class="loadoutLines" ></div>');
-    }
-
-    for (i=0; i < 2; i++) {
-        document.getElementById('secondaryGadget').insertAdjacentHTML('beforeend','<div id="secondaryGadget'+[i+1]+'" class="loadoutLines" ></div>');
-    }
+    //Choose and show
+    chosenWep = Math.floor(Math.random() * weaponAmount);
+    console.log(DOMid+" = "+(chosenWep+1))
+    document.getElementById(DOMid+[chosenWep+1]).classList.add('loadoutActive');
 
     //Save previous amount to delete on next run
-    hasbeenrun = 1;
-    previousPrimaryWeaponAmount = wep1;
-    previousSecondaryWeaponAmount = wep2;
-
-    //Choose
-
-    chosenPrimaryWeapon = Math.floor(Math.random() * wep1);
-    chosenSecondaryWeapon = Math.floor(Math.random() * wep2);
-    chosenSecondaryGadget = Math.floor(Math.random() * 2);
-
-    console.log("Chosen primary weapon = "+(chosenPrimaryWeapon+1))
-    console.log("Chosen secondary weapon = "+(chosenSecondaryWeapon+1))
-    console.log("Chosen secondary gadget = "+(chosenSecondaryGadget+1))
-
-    document.getElementById('primaryWeapon'+[chosenPrimaryWeapon+1]+'').classList.add('loadoutActive');
-    document.getElementById('secondaryWeapon'+[chosenSecondaryWeapon+1]+'').classList.add('loadoutActive');
-    document.getElementById('secondaryGadget'+[chosenSecondaryGadget+1]+'').classList.add('loadoutActive');
+    return weaponAmount;
 }
 
 //toggle loadout interface
@@ -171,6 +147,7 @@ document.getElementById("r6s-toggle-loadout").addEventListener("click", function
 
 /*
 var testOpStatus = 0;
+document.getElementById("test-ops").classList.remove("hide");
 
 DOMtestToggle = document.getElementById("test-toggle");
 DOMtestToggle.innerHTML = '<i class="fas fa-plus-circle"></i> ON '
@@ -182,14 +159,14 @@ document.getElementById("test-toggle").addEventListener("click", function() {
     if (testOpStatus == 0) {
         DOMtestToggle.style.backgroundColor = "#FE2020";
         DOMtestToggle.innerHTML = '<i class="fas fa-minus-circle"></i> OFF';
-        attackers.pop();
-        defenders.pop();
+        delete Attacker.nøkk
+        delete Defender.warden
         testOpStatus = 1;
     } else {
         DOMtestToggle.style.backgroundColor = "rgb(5, 138, 5";
         DOMtestToggle.innerHTML = '<i class="fas fa-plus-circle"></i> ON ';
-        attackers.push("Nomad");
-        defenders.push("Kaid");
+        Attacker.nøkk = {name: 'Nøkk', primaryWeapon: 2, secondaryWeapon: 2};
+        Defender.warden = {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2};
         testOpStatus = 0;
     };
 });
@@ -201,7 +178,7 @@ document.getElementById("test-toggle").addEventListener("mouseenter", function()
 document.getElementById("test-toggle").addEventListener("mouseleave", function() {
     DOMtestToggle.style.opacity = "1";
 })
- */
+*/
 
 //About
 DOMaboutOpen = document.getElementById("about-open");

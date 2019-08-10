@@ -1,39 +1,36 @@
 windowLoc = window.location.href.split("?")[1];
 console.log(windowLoc);
 
-if (windowLoc == "RNG") {
-    document.getElementById("menu").style.display = "none";
+document.querySelector(".presets").style.display = "none";
+
+if (windowLoc === "" || windowLoc === undefined) { //index / front
+    document.getElementById("menu").style.display = "block";
+}
+
+if (windowLoc == "YON") {
     document.getElementById("decider").style.display = "block";
-    document.querySelector(".presets").style.display = "none";
-    //document.getElementById("activateYON").style.display = "none";
-    document.getElementById("uInput").style.display = "none";
+    document.title = "Yes or No | Random";
+    document.getElementById("about-dice").classList.add("hide");
+    document.getElementById("about-PUBG").classList.add("hide");
+}
+
+if (windowLoc == "RNG") {
+    document.getElementById("decider").style.display = "block";
     document.querySelector(".rngElement").style.display = "block";
     document.title = "RNG | Random";
     document.getElementById("about-dice").classList.add("hide");
     document.getElementById("about-PUBG").classList.add("hide");
 }
 
-if (windowLoc == "YON") {
-    document.getElementById("menu").style.display = "none";
-    document.getElementById("decider").style.display = "block";
-    document.getElementById("uInput").style.display = "none";
-    //document.getElementById("activateYON").style.display = "none";
-    document.querySelector(".presets").style.display = "none";
-    document.title = "Yes or No | Random";
-    document.getElementById("about-dice").classList.add("hide");
-    document.getElementById("about-PUBG").classList.add("hide");
-}
-
 if (windowLoc == "decider") {
-    document.getElementById("menu").style.display = "none";
     document.getElementById("decider").style.display = "block";
+    document.getElementById("uInput").style.display = "block";
+    document.getElementById("activate-presets").style.display = "block";
     document.querySelector(".presets").style.display = "none"; //PRESETS
     fetchLocalPresets()
-    //document.getElementById("activateYON").style.display = "none";
     document.title = "Decider | Random";
     document.getElementById("about-dice").classList.add("hide");
     document.getElementById("about-PUBG").classList.add("hide");
-    document.getElementById("deciderItem").style.display = "block";
 }
 
 
@@ -125,7 +122,7 @@ document.getElementById("pre-watchlist").addEventListener("click", function() {
 for(i=0; i < localStorage.length; i++) {
     var currentKey = localStorage.key(i)
     var currentValue = localStorage.getItem(currentKey)
-    document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+currentKey+'" class="dongs unselectable presets">'+currentKey+'</a>');
+    document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+currentKey+'" class="btns2 unselectable presets">'+currentKey+'</a>');
     document.getElementById("pre-"+currentKey+"").addEventListener("click", function() {
         document.getElementById("uInput").value = currentValue;
     });
@@ -135,37 +132,31 @@ for(i=0; i < localStorage.length; i++) {
 
 */
 
-//<a id="pre-watchlist" class="dongs unselectable presets">TV Watchlist</a>
+//<a id="pre-watchlist" class="btns2 unselectable presets">TV Watchlist</a>
 
 //save preset
 document.getElementById("save-preset").addEventListener("click", function() {
+    //Get value from the page
     let nameOfPreset = document.getElementById("name-preset").value
     let valueOfPreset = document.getElementById("uInput").value
     console.log(nameOfPreset)
 
+    //Check if preset name already exists
     if (localStorage.hasOwnProperty(nameOfPreset) == true) {
         console.log("Already exists");
         document.getElementById("pre-"+nameOfPreset).remove();
-
     } else {
         console.log("Unique Name")
     }
 
-
-
+    //Save preset
     localStorage.setItem(document.getElementById("name-preset").value, document.getElementById("uInput").value);
 
-
-
-
-
-    
-    document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+nameOfPreset+'" class="dongs unselectable presets jspresets">'+nameOfPreset+'</a>'); 
+    //Show preset on page
+    document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+nameOfPreset+'" class="btns2 unselectable presets jspresets">'+nameOfPreset+'</a>'); 
     document.getElementById("pre-"+nameOfPreset).addEventListener("click", function() { 
         document.getElementById("uInput").value = valueOfPreset;
     });
-    
-
 })
 
 
@@ -174,7 +165,7 @@ function fetchLocalPresets() {
     for(i=0; i < localStorage.length; i++) {
         let currentKey = localStorage.key(i) //let <3
         let currentValue = localStorage.getItem(currentKey) //let <3
-        document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+currentKey+'" class="dongs unselectable presets jspresets">'+currentKey+'</a>'); 
+        document.getElementById("pre-watchlist").insertAdjacentHTML("afterend", '<a id="pre-'+currentKey+'" class="btns2 unselectable presets jspresets">'+currentKey+'</a>'); 
         document.getElementById("pre-"+currentKey).addEventListener("click", function() { 
             document.getElementById("uInput").value = currentValue;
             document.getElementById("name-preset").value = currentKey;
@@ -182,12 +173,6 @@ function fetchLocalPresets() {
         console.log(currentKey+" - "+currentValue); 
     }
 }
-
-/*
-function findValue(ck) {
-    foundValue = localStorage.getItem(ck);
-    document.getElementById("uInput").value = foundValue;
-}*/
 
 //delete preset
 document.getElementById("delete-preset").addEventListener("click", function() {
@@ -222,18 +207,19 @@ DOMcloseWindowButton2 = document.getElementById("close-window-button2");
 DOMabout = document.getElementById("about");
 //Settings
 DOMsettings = document.getElementById("settings");
-DOMsettings = document.getElementById("settings");
 
 
 DOMaboutOpen.addEventListener("click", function() {
     DOMabout.style.display = "block";
-    DOMsettings.style.display = "none";
+    //DOMsettings.style.display = "none";
 })
 
+/*
 document.getElementById("deciderItem").addEventListener("click", function() {
     DOMsettings.style.display = "block";
     DOMabout.style.display = "none";
 })
+*/
 
 DOMcloseWindow.addEventListener("click", function() {
     DOMabout.style.display = "none";
@@ -244,6 +230,7 @@ DOMcloseWindowButton.addEventListener("click", function() {
 })
 
 //Settings
+/*
 DOMcloseWindow2.addEventListener("click", function() {
     DOMsettings.style.display = "none";
 })
@@ -251,7 +238,7 @@ DOMcloseWindow2.addEventListener("click", function() {
 DOMcloseWindowButton2.addEventListener("click", function() {
     DOMsettings.style.display = "none";
 })
-
+*/
 
 //Console print
 console.log("Program loaded");
