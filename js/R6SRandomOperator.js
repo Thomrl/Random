@@ -30,7 +30,8 @@ var Attacker = {
     maverick: {name: 'Maverick', primaryWeapon: 2, secondaryWeapon: 1},
     nomad: {name: 'Nomad', primaryWeapon: 2, secondaryWeapon: 1},
     gridlock: {name: 'Gridlock', primaryWeapon: 2, secondaryWeapon: 2},
-    nøkk: {name: 'Nøkk', primaryWeapon: 2, secondaryWeapon: 2}
+    nøkk: {name: 'Nøkk', primaryWeapon: 2, secondaryWeapon: 2},
+    amaru: {name: 'Amaru', primaryWeapon: 2, secondaryWeapon: 2}
 }
 
 var Defender = {
@@ -57,7 +58,8 @@ var Defender = {
     clash: {name: 'Clash', primaryWeapon: 1, secondaryWeapon: 2},
     kaid: {name: 'Kaid', primaryWeapon: 2, secondaryWeapon: 1},
     mozzie: {name: 'Mozzie', primaryWeapon: 2, secondaryWeapon: 2},
-    warden: {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2}
+    warden: {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2},
+    goyo: {name: 'Goyo', primaryWeapon: 2, secondaryWeapon: 1}
 }
 
 
@@ -145,7 +147,7 @@ document.getElementById("r6s-toggle-loadout").addEventListener("click", function
 
 //test operators
 
-/*
+
 var testOpStatus = 0;
 document.getElementById("test-ops").classList.remove("hide");
 
@@ -159,14 +161,14 @@ document.getElementById("test-toggle").addEventListener("click", function() {
     if (testOpStatus == 0) {
         DOMtestToggle.style.backgroundColor = "#FE2020";
         DOMtestToggle.innerHTML = '<i class="fas fa-minus-circle"></i> OFF';
-        delete Attacker.nøkk
-        delete Defender.warden
+        delete Attacker.amaru
+        delete Defender.goyo
         testOpStatus = 1;
     } else {
         DOMtestToggle.style.backgroundColor = "rgb(5, 138, 5";
         DOMtestToggle.innerHTML = '<i class="fas fa-plus-circle"></i> ON ';
-        Attacker.nøkk = {name: 'Nøkk', primaryWeapon: 2, secondaryWeapon: 2};
-        Defender.warden = {name: 'Warden', primaryWeapon: 2, secondaryWeapon: 2};
+        Attacker.amaru = {name: 'Amaru', primaryWeapon: 2, secondaryWeapon: 2};
+        Defender.goyo = {name: 'Goyo', primaryWeapon: 2, secondaryWeapon: 1};
         testOpStatus = 0;
     };
 });
@@ -178,7 +180,7 @@ document.getElementById("test-toggle").addEventListener("mouseenter", function()
 document.getElementById("test-toggle").addEventListener("mouseleave", function() {
     DOMtestToggle.style.opacity = "1";
 })
-*/
+
 
 //About
 DOMaboutOpen = document.getElementById("about-open");

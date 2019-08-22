@@ -10,12 +10,18 @@ html, body {
     color: #ffa500;
 }
 
+#name-preset, #save-preset, #delete-preset {
+    border-color: white;
+    background-color: #333333;
+}
+
+
 #grey-body {background-color: #333333;}
 #R6S-body {background-image: url('https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege-v3/r6-siege-v3-bg.jpg');    }
 
 
 #control-preset {margin-bottom: 20px; color:black;}
-#save-preset {color: rgb(0, 92, 28)}
+#save-preset {color: rgb(0, 185, 56)}
 #delete-preset {color: red}
 
 #menu, #decider, .hide, #uInput, #deciderItem, .rngElement {display: none;}
@@ -297,6 +303,7 @@ Rainbow Six Siege
 .op-badge {
     margin-top: -1075px;
     margin-left: 250px;
+    width: 100px;
 }
 
 .op-name {
