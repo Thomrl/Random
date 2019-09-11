@@ -132,6 +132,7 @@ function loadout(weaponAmount, DOMid, previousAmount) {
 }
 
 //toggle loadout interface
+/*
 var loadoutToggle = 0;
 
 document.getElementById("r6s-toggle-loadout").addEventListener("click", function() {
@@ -180,7 +181,7 @@ document.getElementById("test-toggle").addEventListener("mouseenter", function()
 document.getElementById("test-toggle").addEventListener("mouseleave", function() {
     DOMtestToggle.style.opacity = "1";
 })
-
+*/
 
 //About
 DOMaboutOpen = document.getElementById("about-open");

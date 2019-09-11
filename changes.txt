@@ -1,5 +1,10 @@
 August 22, 2019
   * R6 Siege
+    * Test operator section is now disabled. Amary and Goyo are no longer test operators.
+
+
+August 22, 2019
+  * R6 Siege
     * Test operator section is now active.
     * Amary and Goyo (test operators), has been added.
   * Small css adjustments.
