@@ -1,4 +1,9 @@
-August 22, 2019
+September 17, 2019
+  * R6 Siege
+    * Accidently made loadout javascript to a comment, it has now been uncommented?
+
+
+September 11, 2019
   * R6 Siege
     * Test operator section is now disabled. Amary and Goyo are no longer test operators.
 
