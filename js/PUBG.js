@@ -103,15 +103,34 @@ document.getElementById("close-maps").addEventListener("click", function() {
 
 document.getElementById("maps-toggle").addEventListener("click", function() {
 	if (mapsToggle == 1) {
+		//document.querySelector(".click-area").style.display = "none";
 		document.querySelector(".maps").style.display = "none";
 		mapsToggle = 0;
 	} else {
+		//document.querySelector(".click-area").style.display = "block";
+		//console.log("Clicked!");
+		//document.querySelector("#center").disabled = false;
 		document.querySelector(".maps").style.display = "block";
 		mapsToggle = 1;
 	}
 })
 
 
+/*
+document.querySelector("#center").addEventListener("click", function() {
+	document.querySelector(".maps").style.display = "none";
+})
+
+document.querySelector("#center").disabled = true;
+*/
+
+/*
+document.querySelector(".click-area").style.display = "none";
+
+document.querySelector(".click-area").addEventListener("click", function() {
+	document.querySelector(".maps").style.display = "none";
+})
+*/
 
 //If map picker is being opened set mapsToggle = 1
 
