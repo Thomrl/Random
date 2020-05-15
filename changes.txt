@@ -1,3 +1,8 @@
+May 15, 2020
+  * PUBG
+    * Accidently made loadout javascript to a comment, it has now been uncommented?
+
+
 September 17, 2019
   * R6 Siege
     * Accidently made loadout javascript to a comment, it has now been uncommented?

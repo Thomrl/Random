@@ -2,7 +2,7 @@
 button = document.getElementById('pubgGetResult');
 coords = document.getElementById('coords');
 
-//Marking size
+//Marking area size
 var markArea = 200;
 var mapSize = 620;
 
@@ -35,7 +35,49 @@ if ($(window).width() < 620) {
  };
 
 
+ //Marking size
+ function markSmall() {
+	document.querySelector(".goHere").style.height = "50px";
+	document.querySelector(".goHere").style.width = "50px";
+ }
+
+ function markMedium() {
+	document.querySelector(".goHere").style.height = "75px";
+	document.querySelector(".goHere").style.width = "75px";
+ }
+
+ function markBig() {
+	document.querySelector(".goHere").style.height = "100px";
+	document.querySelector(".goHere").style.width = "100px";
+ }
+
+
+/*
+ function changeMarkSize(size) {
+	 document.querySelector("#mark-"size).addEventListener() {
+		 mark+size();
+}
+
+ };
+*/
+
+
+document.querySelector("#mark-Small").addEventListener("click", function() {
+	markSmall();
+});
+
+document.querySelector("#mark-Medium").addEventListener("click", function() {
+	markMedium();
+});
+
+document.querySelector("#mark-Big").addEventListener("click", function() {
+	markBig();
+});
+
+
 //Maps
+
+/*
 if (mapsToggle == 1) {
 	document.getElementById("center").addEventListener("click", function() {
 		if (mapsToggle == 1) {
@@ -49,6 +91,7 @@ if (mapsToggle == 1) {
 } else {
 	console.log("Not active as should be")
 }
+*/
 
 var map1DOM = document.getElementById('map1');
 var map2DOM = document.getElementById('map2');
@@ -101,19 +144,47 @@ document.getElementById("close-maps").addEventListener("click", function() {
 	mapsToggle = 0;
 })
 
+
+
+
+
+
+
+//START - This works!
+
+//show popup when clicking the trigger
+/*
+$('#maps-toggle').on('click touch', function(){
+	$('#mappicker').show();
+  });     
+*/
+
+//show popup when clicking the trigger
 document.getElementById("maps-toggle").addEventListener("click", function() {
 	if (mapsToggle == 1) {
-		//document.querySelector(".click-area").style.display = "none";
 		document.querySelector(".maps").style.display = "none";
 		mapsToggle = 0;
 	} else {
-		//document.querySelector(".click-area").style.display = "block";
-		//console.log("Clicked!");
-		//document.querySelector("#center").disabled = false;
 		document.querySelector(".maps").style.display = "block";
 		mapsToggle = 1;
 	}
 })
+
+//hide it when clicking anywhere else except the popup and the trigger
+$(document).on('click touch', function(event) {
+	if (!$(event.target).parents().addBack().is('#maps-toggle')) {
+	  $('.maps').hide();
+	  mapsToggle = 0;
+	}
+  });
+   
+  // Stop propagation to prevent hiding "#" when clicking on it
+  $('.maps').on('click touch', function(event) {
+	event.stopPropagation();
+  });
+
+//STOP - This works!
+
 
 
 /*
