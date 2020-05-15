@@ -9,7 +9,7 @@ var mapSize = 620;
 //Init
 pubgRandom();
 
-//Button click, select random
+//Button click, select random location
 button.addEventListener('click', pubgRandom);
 
 function pubgRandom() {
@@ -36,6 +36,20 @@ if ($(window).width() < 620) {
 
 
 //Maps
+if (mapsToggle == 1) {
+	document.getElementById("center").addEventListener("click", function() {
+		if (mapsToggle == 1) {
+			document.querySelector(".maps").style.display = "none";
+			mapsToggle = 0;
+		} else {
+			document.querySelector(".maps").style.display = "block";
+			mapsToggle = 1;
+		}
+	})
+} else {
+	console.log("Not active as should be")
+}
+
 var map1DOM = document.getElementById('map1');
 var map2DOM = document.getElementById('map2');
 var map3DOM = document.getElementById('map3');
@@ -93,10 +107,58 @@ document.getElementById("maps-toggle").addEventListener("click", function() {
 		mapsToggle = 0;
 	} else {
 		document.querySelector(".maps").style.display = "block";
-	    mapsToggle = 1;
+		mapsToggle = 1;
 	}
 })
 
+
+
+//If map picker is being opened set mapsToggle = 1
+
+
+//If map picker is being closed set mapsToggle = 0
+
+
+//IF map picker is open enable so when clicked outside of the map picker the map picker will be closed.
+
+/*
+document.getElementById("maps-toggle").addEventListener("click", function() {
+	if (mapsToggle == 1) {
+		console.log("nothing")
+		document.querySelector(".maps").style.display = "none";
+		mapsToggle = 0;
+	} else if (mapsToggle == 2) {
+		document.querySelector(".maps").style.display = "block";
+		mapsToggle = 0;
+	} else if (mapsToggle == 0) {
+		console.log("Clicked!")
+		document.querySelector(".maps").style.display = "block";
+		mapsToggle = 1;
+		document.getElementById("center").addEventListener("click", function() {
+			document.querySelector(".maps").style.display = "none";
+			mapsToggle = 1;
+		})
+	} else {
+		document.querySelector(".maps").style.display = "block";
+		mapsToggle = 1;
+	}
+});
+*/
+
+
+
+
+/*
+document.getElementById("center").addEventListener("click", function() {
+	if (mapsToggle == 1) {
+		document.querySelector(".maps").style.display = "none";
+		mapsToggle = 0;
+	} else {
+		document.querySelector(".maps").style.display = "block";
+		mapsToggle = 1;
+	}
+});
+*/
 
 //copyright
 DOMshowLessCopyright = document.getElementById("show-less-copyright");
