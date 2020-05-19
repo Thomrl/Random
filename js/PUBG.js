@@ -104,7 +104,7 @@ function removeMaps() {
 	document.querySelector('.pubgGrid').classList.remove('pubgM');
 	document.querySelector('.pubgGrid').classList.remove('pubgS');
 	document.querySelector('.pubgGrid').classList.remove('fortnite');
-	document.querySelector('.pubgGrid').classList.remove('ION');
+	document.querySelector('.pubgGrid').classList.remove('warzone');
 }
 
 
@@ -134,7 +134,7 @@ map4DOM.addEventListener('click', function(){
 
 map5DOM.addEventListener('click', function(){
 	removeMaps();
-	document.querySelector('.pubgGrid').classList.add('ION');
+	document.querySelector('.pubgGrid').classList.add('warzone');
 });
 
 var mapsToggle = 0;
