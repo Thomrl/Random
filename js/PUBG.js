@@ -184,6 +184,7 @@ $(document).on('click touch', function(event) {
   });
 
 //STOP - This works!
+//Git wont sync, just adding to see if it helps
 
 
 

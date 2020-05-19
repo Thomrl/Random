@@ -1,6 +1,11 @@
-May 15, 2020
-  * PUBG
-    * Accidently made loadout javascript to a comment, it has now been uncommented?
+May 19, 2020
+  * (BRLP) Battle Royale Location Picker.
+    * Map picker can now be closed by clicking outside.
+    * Warzone Map Added.
+    * Warzone is now the default map as it's the most relevant right now.
+    * Marking sizes has been added.
+  * Credits.html has been added.
+    * Better way to see/show what's being used on the site, when I've added more to it that is.
 
 
 September 17, 2019
