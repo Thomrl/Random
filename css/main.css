@@ -11,6 +11,16 @@ html, body {
     color: #ffa500;
 }
 
+.credits header {
+    font-weight: bold;
+}
+
+.credits p, .credits h3, .credits li {
+    color: lightgrey;
+    margin-left: 20px;
+    list-style: none;
+}
+
 #name-preset, #save-preset, #delete-preset {
     border-color: white;
     background-color: #333333;
@@ -446,6 +456,8 @@ Rainbow Six Siege
 .spaceDown10 {margin-bottom: 10px;}
 
 .spaceRight10 {margin-right: 10px;}
+
+.spaceLeft10 {margin-left: 10px;}
 
 .closer5 {margin-top: -5px;}
 .closer15 {margin-top: -15px;}
